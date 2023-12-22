@@ -4,10 +4,11 @@
 
 <nav>
     <a href="/">Home</a>
-    {#if data.registrado && data.registrado !== ''}
+    {#if data.registrado}
         <a href="/profile">Profile</a>
     {:else}
         <a href="/login">Log in</a>
+        <a href="/register">Register</a>
     {/if}
 </nav>
 

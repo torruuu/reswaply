@@ -2,11 +2,16 @@
     export let form;
 </script>
 
-<h2>Log in</h2>
+<h2>Registration</h2>
 <form method="post">
     <label>
         Usuario:
-        <input type="text" name="user" value={form?.formUser ?? ''} required>
+        <input type="text" name="user" required>
+    </label>
+    <br>
+    <label>
+        Correo:
+        <input type="email" name="email" required>
     </label>
     <br>
     <label>

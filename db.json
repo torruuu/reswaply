@@ -1,83 +1,88 @@
 {
-    "exercises": [
-        {
-            "id": "1",
-            "name": "Press de banca plano",
-            "level": "intermedio",
-            "categoryId": "1"
-        },
-        {
-            "id": "2",
-            "name": "Press de banca inclinado en máquina",
-            "level": "fácil",
-            "categoryId": "1"
-        },
-        {
-            "id": "3",
-            "name": "Remo gironda neutro",
-            "level": "intermedio",
-            "categoryId": "2"
-        },
-        {
-            "id": "4",
-            "name": "Pull over",
-            "level": "dificil",
-            "categoryId": "2"
-        },
-        {
-            "id": "5",
-            "name": "Aductor en máquina",
-            "level": "facil",
-            "categoryId": "3"
-        },
-        {
-            "id": "6",
-            "name": "Sentadilla",
-            "level": "dificil",
-            "categoryId": "3"
-        },
-        {
-            "id": "7",
-            "name": "Curl de bíceps inclinado",
-            "level": "fácil",
-            "categoryId": "4"
-        },
-        {
-            "id": "8",
-            "name": "Press francés",
-            "level": "dificil",
-            "categoryId": "4"
-        }
-    ],
-
-    "categories": [
-        {
-            "id": 1,
-            "name": "empujes",
-            "description": "Ejercicios que involucrarán el pecho, deltoides y/o tríceps."
-        },
-        {
-            "id": 2,
-            "name": "tirones",
-            "description": "Ejercicios que involucrarán la espalda y bíceps."
-        },
-        {
-            "id": 3,
-            "name": "pierna",
-            "description": "Ejercicios que involucrarán el cuadriceps, isquiotibiales, gemelo, etc."
-        },
-        {
-            "id": 4,
-            "name": "brazo",
-            "description": "Ejercicios que involucrarán el deltoides, bíceps y tríceps."
-        }
-    ],
-
-    "users": [
-        {
-            "id": "1",
-            "name": "Alejandro",
-            "password": "123456"
-        }
-    ]
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Press de banca plano",
+      "level": "intermedio",
+      "categoryId": "1"
+    },
+    {
+      "id": 2,
+      "name": "Press de banca inclinado en máquina",
+      "level": "fácil",
+      "categoryId": "1"
+    },
+    {
+      "id": 3,
+      "name": "Remo gironda neutro",
+      "level": "intermedio",
+      "categoryId": "2"
+    },
+    {
+      "id": 4,
+      "name": "Pull over",
+      "level": "dificil",
+      "categoryId": "2"
+    },
+    {
+      "id": 5,
+      "name": "Aductor en máquina",
+      "level": "facil",
+      "categoryId": "3"
+    },
+    {
+      "id": 6,
+      "name": "Sentadilla",
+      "level": "dificil",
+      "categoryId": "3"
+    },
+    {
+      "id": 7,
+      "name": "Curl de bíceps inclinado",
+      "level": "fácil",
+      "categoryId": "4"
+    },
+    {
+      "id": 8,
+      "name": "Press francés",
+      "level": "dificil",
+      "categoryId": "4"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "empujes",
+      "description": "Ejercicios que involucrarán el pecho, deltoides y/o tríceps."
+    },
+    {
+      "id": 2,
+      "name": "tirones",
+      "description": "Ejercicios que involucrarán la espalda y bíceps."
+    },
+    {
+      "id": 3,
+      "name": "pierna",
+      "description": "Ejercicios que involucrarán el cuadriceps, isquiotibiales, gemelo, etc."
+    },
+    {
+      "id": 4,
+      "name": "brazo",
+      "description": "Ejercicios que involucrarán el deltoides, bíceps y tríceps."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Alejandro",
+      "email": "ale.torrubiano@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "torru",
+      "email": "kk@gmail.com",
+      "password": "123456",
+      "id": 2
+    }
+  ]
 }

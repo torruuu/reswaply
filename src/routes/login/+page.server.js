@@ -1,12 +1,11 @@
 import { redirect } from '@sveltejs/kit';
 
-export function load({ cookies }) {
-    const user = cookies.get('user');
+// export function load({ state }) {
+//     const user = state?.user;
+//     const password = state?.password;
 
-    if (user !== undefined && user !== '') {
-        throw redirect(302, '/');
-    }
-}
+//     return { user, password }
+// }
 
 export const actions = {
     default: async ({ request, cookies }) => {
@@ -21,8 +20,8 @@ export const actions = {
         const correctData = users.find((user) => user.name === formUser && user.password === formPassword);
 
         if (correctData) {
-            console.log("Usuario válido");
             cookies.set('user', formUser, { path: '/' });
+            throw redirect(302, '/');
         } else {
             let errorMessage = "El usuario introducido no existe";
             if (userFound) {
