@@ -7,5 +7,5 @@
 {/if}
 
 {#each data.exercises as exercise}
-    <p>{exercise.name}</p>
+    <p>{exercise.description}</p>
 {/each}

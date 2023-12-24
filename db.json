@@ -1,88 +1,111 @@
 {
-  "exercises": [
+  "posts": [
     {
-      "id": 1,
-      "name": "Press de banca plano",
-      "level": "intermedio",
-      "categoryId": "1"
+        "productId": 1,
+        "userId": 1,
+        "conditionId": 1,
+        "description": "Iphone X en perfecto estado",
+        "precio": 500,
+        "id": 1
     },
     {
-      "id": 2,
-      "name": "Press de banca inclinado en máquina",
-      "level": "fácil",
-      "categoryId": "1"
+        "productId": 2,
+        "userId": 1,
+        "conditionId": 2,
+        "description": "Portátil asus en buen estado",
+        "precio": 800,
+        "id": 2
+      }
+  ],
+
+  "products": [
+    {
+        "name": "Iphone X",
+        "brandId": 1,
+        "categoryId": 1,
+        "id": 1
     },
     {
-      "id": 3,
-      "name": "Remo gironda neutro",
-      "level": "intermedio",
-      "categoryId": "2"
+        "name": "Vivobook 16X",
+        "brandId": 4,
+        "categoryId": 2,
+        "id": 2
     },
     {
-      "id": 4,
-      "name": "Pull over",
-      "level": "dificil",
-      "categoryId": "2"
+        "name": "Playstation 5",
+        "brandId": 3,
+        "categoryId": 3,
+        "id": 3
     },
     {
-      "id": 5,
-      "name": "Aductor en máquina",
-      "level": "facil",
-      "categoryId": "3"
-    },
-    {
-      "id": 6,
-      "name": "Sentadilla",
-      "level": "dificil",
-      "categoryId": "3"
-    },
-    {
-      "id": 7,
-      "name": "Curl de bíceps inclinado",
-      "level": "fácil",
-      "categoryId": "4"
-    },
-    {
-      "id": 8,
-      "name": "Press francés",
-      "level": "dificil",
-      "categoryId": "4"
+        "name": "Galaxy S23",
+        "brandId": 2,
+        "categoryId": 1,
+        "id": 4
     }
   ],
+
   "categories": [
     {
-      "id": 1,
-      "name": "empujes",
-      "description": "Ejercicios que involucrarán el pecho, deltoides y/o tríceps."
+        "name": "Móviles",
+        "id": 1
     },
     {
-      "id": 2,
-      "name": "tirones",
-      "description": "Ejercicios que involucrarán la espalda y bíceps."
+        "name": "Portátiles",
+        "id": 2
     },
     {
-      "id": 3,
-      "name": "pierna",
-      "description": "Ejercicios que involucrarán el cuadriceps, isquiotibiales, gemelo, etc."
-    },
-    {
-      "id": 4,
-      "name": "brazo",
-      "description": "Ejercicios que involucrarán el deltoides, bíceps y tríceps."
+        "name": "Consolas",
+        "id": 3
     }
   ],
-  "users": [
+
+  "brands": [
     {
-      "id": 1,
-      "name": "Alejandro",
-      "email": "ale.torrubiano@gmail.com",
-      "password": "123456"
+        "name": "Apple",
+        "id": 1
     },
     {
-      "name": "torru",
-      "email": "kk@gmail.com",
-      "password": "123456",
-      "id": 2
+        "name": "Samsung",
+        "id": 2
+    },
+    {
+        "name": "Sony",
+        "id": 3
+    },
+    {
+        "name": "Asus",
+        "id": 4
+    }
+  ],
+
+  "conditions": [
+    {
+        "name": "Nuevo",
+        "id": 1
+    },
+    {
+        "name": "Poco usado",
+        "id": 2
+    },
+    {
+        "name": "Usado",
+        "id": 3
+    }
+  ],
+
+  "users": [
+    {
+        "name": "Alejandro",
+        "email": "ale.torrubiano@gmail.com",
+        "password": "123456",
+        "id": 1
+    },
+    {
+        "name": "torru",
+        "email": "kk@gmail.com",
+        "password": "123456",
+        "id": 2
     }
   ]
 }
