@@ -1,7 +1,7 @@
 export async function load({ cookies }) {
     const response = await fetch("http://localhost:4000/posts");
-    const exercises = await response.json();
+    const posts = await response.json();
 
     const userName = cookies.get('user');
-    return { exercises, userName }
+    return { posts, userName }
 }
