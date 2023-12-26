@@ -1,4 +1,5 @@
 <script>
+    import Preview from '../components/Preview.svelte';
     export let data;
 </script>
 
@@ -7,5 +8,5 @@
 {/if}
 
 {#each data.posts as post}
-    <p>{post.description}</p>
+    <Preview {post} />
 {/each}
