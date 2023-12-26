@@ -29,6 +29,21 @@
         "sold": false,
         "buyer": null,
         "id": 2
+      },
+      {
+        "seller": "torru",
+        "product": {
+            "name": "Playstation 5",
+            "brand": "Sony",
+            "category": "Consolas",
+            "id": 3
+        },
+        "condition": "Nuevo",
+        "description": "Playstation 5 como nueva",
+        "precio": 400,
+        "sold": true,
+        "buyer": "Alejandro",
+        "id": 2
       }
   ],
 

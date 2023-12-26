@@ -10,7 +10,7 @@ import { redirect } from '@sveltejs/kit';
 
 export const actions = {
     default: ({ cookies }) => {
-        cookies.delete('user');
+        cookies.delete('user', { path: '/' });
         throw redirect(302, '/');
     }
 };

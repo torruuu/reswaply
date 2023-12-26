@@ -5,7 +5,7 @@
 <nav>
     <a href="/">Home</a>
     {#if data.registrado}
-        <a href="/profile">Profile</a>
+        <a href="/profile/products">Profile</a>
     {:else}
         <a href="/login">Log in</a>
         <a href="/register">Register</a>

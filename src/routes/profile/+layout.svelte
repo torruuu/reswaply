@@ -1,7 +1,6 @@
+<a href="/profile/shopping">Compras</a>
+<a href="/profile/sales">Ventas</a>
 <a href="/profile/products">Productos</a>
-
-<form method="post">
-    <input type="submit" name="log-out" value="Log out">
-</form>
+<a href="/profile/logout">Log out</a>
 
 <slot />

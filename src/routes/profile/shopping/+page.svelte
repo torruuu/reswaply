@@ -7,5 +7,5 @@
         <p>{post.description}</p>
     {/each}
 {:else}
-    <h2>No tiene productos en venta</h2>
+    <h2>No tienes compras todavía</h2>
 {/if}
