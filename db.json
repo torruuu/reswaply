@@ -6,6 +6,8 @@
             "name": "Iphone X",
             "brand": "Apple",
             "category": "Móviles",
+            "color": "Plata",
+            "storage": 64,
             "id": 1
         },
         "condition": "Nuevo",
@@ -18,10 +20,12 @@
     {
         "seller": "Alejandro",
         "product": {
-            "name": "Vivobook 16X",
-            "brand": "Asus",
-            "category": "Portátiles",
-            "id": 2
+            "name": "Galaxy Tab A8",
+            "brand": "Samsung",
+            "category": "Tablets",
+            "color": "Grey",
+            "storage": 32,
+            "id": 3
         },
         "condition": "Poco usado",
         "description": "Portátil asus en buen estado",
@@ -33,10 +37,12 @@
       {
         "seller": "torru",
         "product": {
-            "name": "Playstation 5",
+            "name": "Playstation 4 Slim",
             "brand": "Sony",
             "category": "Consolas",
-            "id": 3
+            "color": "White",
+            "storage": 32,
+            "id": 2
         },
         "condition": "Nuevo",
         "description": "Playstation 5 como nueva",
@@ -52,24 +58,36 @@
         "name": "Iphone X",
         "brand": "Apple",
         "category": "Móviles",
+        "color": "Plata",
+        "storage": 64,
+        "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
         "id": 1
     },
     {
-        "name": "Vivobook 16X",
-        "brand": "Asus",
-        "category": "Portátiles",
+        "name": "Playstation 4 Slim",
+        "brand": "Sony",
+        "category": "Consolas",
+        "color": "Black",
+        "storage": 32,
+        "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
         "id": 2
     },
     {
-        "name": "Playstation 5",
-        "brand": "Sony",
-        "category": "Consolas",
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "Tablets",
+        "color": "Grey",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
         "id": 3
     },
     {
         "name": "Galaxy S23",
         "brand": "Samsung",
         "category": "Móviles",
+        "color": "Blanco",
+        "storage": 64,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
         "id": 4
     }
   ],
