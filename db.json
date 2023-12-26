@@ -1,19 +1,33 @@
 {
   "posts": [
     {
-        "productId": 1,
-        "userId": 1,
-        "conditionId": 1,
+        "seller": "Alejandro",
+        "product": {
+            "name": "Iphone X",
+            "brand": "Apple",
+            "category": "Móviles",
+            "id": 1
+        },
+        "condition": "Nuevo",
         "description": "Iphone X en perfecto estado",
         "precio": 500,
+        "sold": false,
+        "buyer": null,
         "id": 1
     },
     {
-        "productId": 2,
-        "userId": 1,
-        "conditionId": 2,
+        "seller": "Alejandro",
+        "product": {
+            "name": "Vivobook 16X",
+            "brand": "Asus",
+            "category": "Portátiles",
+            "id": 2
+        },
+        "condition": "Poco usado",
         "description": "Portátil asus en buen estado",
         "precio": 800,
+        "sold": false,
+        "buyer": null,
         "id": 2
       }
   ],
@@ -21,76 +35,27 @@
   "products": [
     {
         "name": "Iphone X",
-        "brandId": 1,
-        "categoryId": 1,
+        "brand": "Apple",
+        "category": "Móviles",
         "id": 1
     },
     {
         "name": "Vivobook 16X",
-        "brandId": 4,
-        "categoryId": 2,
+        "brand": "Asus",
+        "category": "Portátiles",
         "id": 2
     },
     {
         "name": "Playstation 5",
-        "brandId": 3,
-        "categoryId": 3,
+        "brand": "Sony",
+        "category": "Consolas",
         "id": 3
     },
     {
         "name": "Galaxy S23",
-        "brandId": 2,
-        "categoryId": 1,
+        "brand": "Samsung",
+        "category": "Móviles",
         "id": 4
-    }
-  ],
-
-  "categories": [
-    {
-        "name": "Móviles",
-        "id": 1
-    },
-    {
-        "name": "Portátiles",
-        "id": 2
-    },
-    {
-        "name": "Consolas",
-        "id": 3
-    }
-  ],
-
-  "brands": [
-    {
-        "name": "Apple",
-        "id": 1
-    },
-    {
-        "name": "Samsung",
-        "id": 2
-    },
-    {
-        "name": "Sony",
-        "id": 3
-    },
-    {
-        "name": "Asus",
-        "id": 4
-    }
-  ],
-
-  "conditions": [
-    {
-        "name": "Nuevo",
-        "id": 1
-    },
-    {
-        "name": "Poco usado",
-        "id": 2
-    },
-    {
-        "name": "Usado",
-        "id": 3
     }
   ],
 
