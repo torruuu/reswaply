@@ -28,7 +28,6 @@ export const actions = {
             });
             if (responseInsert.ok) {
                 cookies.set('user', formUser, { path: '/' });
-                console.log('>>>>>>>>>>>');
                 throw redirect(302, '/');
             }
         } else {

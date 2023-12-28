@@ -1,63 +1,8 @@
 {
   "posts": [
     {
-        "seller": "Alejandro",
-        "product": {
-            "name": "Iphone X",
-            "brand": "Apple",
-            "category": "Móviles",
-            "color": "Plata",
-            "storage": 64,
-            "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
-            "id": 1
-        },
-        "condition": "Nuevo",
-        "description": "Iphone X en perfecto estado",
-        "price": 500,
-        "sold": false,
-        "buyer": null,
-        "id": 1
-    },
-    {
-        "seller": "Alejandro",
-        "product": {
-            "name": "Galaxy Tab A8",
-            "brand": "Samsung",
-            "category": "Tablets",
-            "color": "Grey",
-            "storage": 32,
-            "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
-            "id": 3
-        },
-        "condition": "Poco usado",
-        "description": "Portátil asus en buen estado",
-        "price": 800,
-        "sold": false,
-        "buyer": null,
-        "id": 2
-      },
-      {
-        "seller": "torru",
-        "product": {
-            "name": "Playstation 4 Slim",
-            "brand": "Sony",
-            "category": "Consolas",
-            "color": "Black",
-            "storage": 500,
-            "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
-            "id": 2
-        },
-        "condition": "Nuevo",
-        "description": "Playstation 4 como nueva",
-        "price": 300,
-        "sold": true,
-        "buyer": "Alejandro",
-        "id": 2
-      }
-  ],
-
-  "products": [
-    {
+      "seller": "Alejandro",
+      "product": {
         "name": "Iphone X",
         "brand": "Apple",
         "category": "Móviles",
@@ -65,17 +10,17 @@
         "storage": 64,
         "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
         "id": 1
+      },
+      "condition": "Nuevo",
+      "description": "Iphone X en perfecto estado",
+      "price": 500,
+      "sold": false,
+      "buyer": null,
+      "id": 1
     },
     {
-        "name": "Playstation 4 Slim",
-        "brand": "Sony",
-        "category": "Consolas",
-        "color": "Black",
-        "storage": 500,
-        "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
-        "id": 2
-    },
-    {
+      "seller": "Alejandro",
+      "product": {
         "name": "Galaxy Tab A8",
         "brand": "Samsung",
         "category": "Tablets",
@@ -83,30 +28,85 @@
         "storage": 32,
         "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
         "id": 3
+      },
+      "condition": "Poco usado",
+      "description": "Portátil asus en buen estado",
+      "price": 800,
+      "sold": false,
+      "buyer": null,
+      "id": 2
     },
     {
-        "name": "Galaxy S23",
-        "brand": "Samsung",
-        "category": "Móviles",
-        "color": "Blanco",
-        "storage": 64,
-        "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
-        "id": 4
+      "seller": "torru",
+      "product": {
+        "name": "Playstation 4 Slim",
+        "brand": "Sony",
+        "category": "Consolas",
+        "color": "Black",
+        "storage": 500,
+        "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
+        "id": 2
+      },
+      "condition": "Nuevo",
+      "description": "Playstation 4 como nueva",
+      "price": 300,
+      "sold": true,
+      "buyer": "Alejandro",
+      "id": 2
     }
   ],
-
-  "users": [
+  "products": [
     {
-        "name": "Alejandro",
-        "email": "ale.torrubiano@gmail.com",
-        "password": "123456",
-        "id": 1
+      "name": "Iphone X",
+      "brand": "Apple",
+      "category": "Móviles",
+      "color": "Plata",
+      "storage": 64,
+      "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
+      "id": 1
     },
     {
-        "name": "torru",
-        "email": "kk@gmail.com",
-        "password": "123456",
-        "id": 2
+      "name": "Playstation 4 Slim",
+      "brand": "Sony",
+      "category": "Consolas",
+      "color": "Black",
+      "storage": 500,
+      "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
+      "id": 2
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "Tablets",
+      "color": "Grey",
+      "storage": 32,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+      "id": 3
+    },
+    {
+      "name": "Galaxy S23",
+      "brand": "Samsung",
+      "category": "Móviles",
+      "color": "Blanco",
+      "storage": 64,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "Alejandro",
+      "email": "ale.torrubiano@gmail.com",
+      "password": "123456",
+      "balance": 0,
+      "id": 1
+    },
+    {
+      "name": "torru",
+      "email": "kk@gmail.com",
+      "password": "123456",
+      "balance": 0,
+      "id": 2
     }
   ]
 }
