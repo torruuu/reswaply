@@ -4,12 +4,10 @@ export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario
 
-        const province = data.get('province');
-        const city = data.get('city');
-        const cp = data.get('cp');
-        const address = data.get('address');
         const number = data.get('number');
-        const door = data.get('door');
+        const month = data.get('month');
+        const year = data.get('year');
+        const cvc = data.get('code');
 
         const userName = cookies.get('user');
 
@@ -24,13 +22,11 @@ export const actions = {
         const responseUpdate = await fetch(`http://localhost:4000/users/${userId}`, {
             method: 'PATCH',
             body: JSON.stringify({
-                "address": {
-                    "province": province,
-                    "city": city,
-                    "cp": cp,
-                    "street": address,
+                "card": {
                     "number": number,
-                    "door": door
+                    "month": month,
+                    "year": year,
+                    "cvc": cvc
                 }
             }),
             headers: {
@@ -39,7 +35,7 @@ export const actions = {
         });
 
         if (responseUpdate.ok) {
-            throw redirect(302, '/profile/info/address');
+            throw redirect(302, '/profile/info/payments');
         }
 
         return {
