@@ -20,7 +20,9 @@ export const actions = {
                 body: JSON.stringify({
                     "name": formUser,
                     "email": formEmail,
-                    "password": formPassword
+                    "password": formPassword,
+                    "balance": 0,
+                    "address": null
                 }),
                 headers: {
                     'Content-Type': 'application/json'

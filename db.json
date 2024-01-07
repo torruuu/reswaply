@@ -99,6 +99,14 @@
       "email": "ale.torrubiano@gmail.com",
       "password": "123456",
       "balance": 0,
+      "address": {
+        "province": "Madrid",
+        "city": "Majadahonda",
+        "cp": "28222",
+        "street": "Avenida Rey Juan Carlos I",
+        "number": "6",
+        "door": "1A"
+      },
       "id": 1
     },
     {
@@ -106,6 +114,7 @@
       "email": "kk@gmail.com",
       "password": "123456",
       "balance": 0,
+      "address": null,
       "id": 2
     }
   ]

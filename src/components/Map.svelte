@@ -54,7 +54,6 @@
         });
         autocomplete.addListener("place_changed", () => {
             const place = autocomplete.getPlace();
-            console.log(place);
 
             Object.keys(fieldValues).forEach(key => {
                 fieldValues[key] = "";
