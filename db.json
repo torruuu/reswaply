@@ -107,6 +107,7 @@
         "number": "6",
         "door": "1A"
       },
+      "card": null,
       "id": 1
     },
     {
@@ -115,6 +116,7 @@
       "password": "123456",
       "balance": 0,
       "address": null,
+      "card": null,
       "id": 2
     }
   ]
