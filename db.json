@@ -98,7 +98,7 @@
       "name": "Alejandro",
       "email": "ale.torrubiano@gmail.com",
       "password": "123456",
-      "balance": 0,
+      "balance": 4,
       "address": {
         "province": "Madrid",
         "city": "Majadahonda",
@@ -108,10 +108,10 @@
         "door": "1A"
       },
       "card": {
-        "number": "1231 2312 3123 1231",
-        "month": "02",
-        "year": "24",
-        "cvc": "124"
+        "number": "3123 1131 2412 4124",
+        "month": "12",
+        "year": "25",
+        "cvc": "123"
       },
       "id": 1
     },

@@ -8,4 +8,4 @@
 <h3>Tu saldo:</h3>
 <p>{balance}</p>
 
-<a href="#">Recargar</a>
+<a href="/recharge">Recargar</a>

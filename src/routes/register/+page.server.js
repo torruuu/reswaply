@@ -22,7 +22,8 @@ export const actions = {
                     "email": formEmail,
                     "password": formPassword,
                     "balance": 0,
-                    "address": null
+                    "address": null,
+                    "card": null
                 }),
                 headers: {
                     'Content-Type': 'application/json'
