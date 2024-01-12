@@ -1,4 +1,9 @@
 <script>
+    import { enhance } from '$app/forms';
+    import { goto, afterNavigate } from '$app/navigation';
+    import { base } from '$app/paths';
+
+    let previousPage = base;
     export let form;
 
     let cardNumber = '';
@@ -120,9 +125,20 @@
         }
         codeError = '';
     }
+
+    // Navegamos a la url anterior cuando success sea true
+    afterNavigate(({from}) => {
+        previousPage = from?.url.pathname || previousPage;
+    })
+
+    $: {
+        if (form?.success) {
+            goto(previousPage);
+        }
+    }
 </script>
 
-<form method="post">
+<form method="post" use:enhance>
     <label>
         Titular:
         <input type="text" name="cardholder" required><br>

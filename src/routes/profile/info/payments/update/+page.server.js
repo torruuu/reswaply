@@ -1,5 +1,3 @@
-import { redirect } from '@sveltejs/kit';
-
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario
@@ -35,7 +33,8 @@ export const actions = {
         });
 
         if (responseUpdate.ok) {
-            throw redirect(302, '/profile/info/payments');
+            return {success: true};
+            // throw redirect(302, '/profile/info/payments');
         }
 
         return {
