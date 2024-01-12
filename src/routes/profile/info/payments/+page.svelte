@@ -5,4 +5,4 @@
 </script>
 
 <p>{card?.number ?? 'No tiene ninguna tarjeta vinculada'}</p>
-<a href="/profile/info/payments/update">Actualizar</a>
+<a href="/update-card">Actualizar</a>

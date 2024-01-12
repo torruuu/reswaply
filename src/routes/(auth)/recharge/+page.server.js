@@ -1,14 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
-export async function load({ cookies }) {
-    const userName = cookies.get('user');
-
-    const response = await fetch("http://localhost:4000/users?name=" + userName);
-    const user = await response.json();
-
-    return { user }
-}
-
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario

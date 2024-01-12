@@ -29,5 +29,5 @@
 {:else}
     <h4>No tiene ninguna tarjeta vinculada</h4>
     <h2>¿Quiere añadir una?</h2>
-    <a href="/profile/info/payments/update">Añadir</a>
+    <a href="/update-card">Añadir</a>
 {/if}
