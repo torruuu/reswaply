@@ -1,8 +1,30 @@
-<a href="/profile/info/user-info">Info</a>
-<a href="/profile/shopping">Compras</a>
-<a href="/profile/sales">Ventas</a>
-<a href="/profile/products">Productos</a>
-<a href="/profile/wallet">Cartera</a>
-<a href="/profile/logout">Log out</a>
+<script>
+	import ProfileHeader from "../../components/ProfileHeader.svelte";
+    import { page } from '$app/stores';
+
+    let path = $page.route.id;
+
+    $: {
+        path = $page.route.id;
+    }
+</script>
+
+<div class="background"></div>
+
+{#key path}
+    <ProfileHeader path={path}/>
+{/key}
 
 <slot />
+
+<style>
+    .background {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: hsla(0, 0%, 7%, .03);
+    }
+</style>

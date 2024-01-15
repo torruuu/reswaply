@@ -1,16 +1,9 @@
 <script>
+	import Header from '../components/Header.svelte';
     import '../global.css';
     export let data;
 </script>
 
-<nav>
-    <a href="/">Home</a>
-    {#if data.registrado}
-        <a href="/profile/products">Profile</a>
-    {:else}
-        <a href="/login">Log in</a>
-        <a href="/register">Register</a>
-    {/if}
-</nav>
+<Header login={data.authenticated}/>
 
 <slot />

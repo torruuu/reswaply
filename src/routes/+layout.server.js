@@ -1,10 +1,10 @@
 export function load({ cookies }) {
     const user = cookies.get('user');
-    let registrado = false;
+    let authenticated = false;
     
     if (user !== undefined) {
-        registrado = true;
+        authenticated = true;
     }
     
-    return { registrado }
+    return { authenticated }
 }
