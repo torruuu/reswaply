@@ -2,6 +2,7 @@ export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario
 
+        const cardholder = data.get('cardholder');
         const number = data.get('number');
         const month = data.get('month');
         const year = data.get('year');
@@ -21,6 +22,7 @@ export const actions = {
             method: 'PATCH',
             body: JSON.stringify({
                 "card": {
+                    "cardholder": cardholder,
                     "number": number,
                     "month": month,
                     "year": year,

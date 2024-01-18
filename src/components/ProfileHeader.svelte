@@ -2,7 +2,7 @@
     export let path;
   
     const sections = [
-      { text: 'Perfil', route: '/profile/info/user-info' },
+      { text: 'Perfil', route: '/profile/info' },
       { text: 'Compras', route: '/profile/shopping' },
       { text: 'Ventas', route: '/profile/sales' },
       { text: 'Productos', route: '/profile/products' },
