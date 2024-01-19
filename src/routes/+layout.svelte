@@ -4,6 +4,6 @@
     export let data;
 </script>
 
-<Header login={data.authenticated}/>
-
-<slot />
+<Header login={data.authenticated}>
+    <slot />
+</Header>
