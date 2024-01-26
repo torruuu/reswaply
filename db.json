@@ -91,6 +91,24 @@
       "storage": 64,
       "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
       "id": 4
+    },
+    {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "Móviles",
+        "color": "Medianoche",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 5
+    },
+    {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "Móviles",
+        "color": "Medianoche",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 6
     }
   ],
   "users": [

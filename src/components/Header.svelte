@@ -1,8 +1,12 @@
 <script>
     import Results from "./Results.svelte";
 
+    export let products = '';
     export let login = false;
-    let filteredText = "";
+    let filteredText = '';
+    let inputFocus = false;
+
+    console.log(products);
 
 </script>
 
@@ -14,7 +18,7 @@
         </a>
     </div>
 
-    <input type="text" class="search-bar" placeholder="¿Qué andas buscando?" bind:value={filteredText}>
+    <input type="text" class="search-bar" placeholder="¿Qué andas buscando?" bind:value={filteredText} on:focusin={() => inputFocus = true} on:focusout={() => inputFocus = false}>
 
     <div class="buttons">
         {#if login}
@@ -27,16 +31,16 @@
         {/if}
     </div>
 
-    {#if filteredText !== ""}
+    {#if filteredText !== "" && inputFocus}
         <div class="results">
-            <Results />
+            <Results products={products} filteredText={filteredText}/>
         </div>
     {/if}
 
-    <div class="content">
-        <slot />
-    </div>
+</div>
 
+<div class="content">
+    <slot />
 </div>
 
 <style>
@@ -50,10 +54,12 @@
     .container {
         display: grid;
         column-gap: 2rem;
-        grid-template-columns: 11rem auto min-content;
+        width: 100%;
+        grid-template-columns: min-content auto min-content;
         grid-template-rows: 5rem auto;
         
         background-color: #fff;
+        padding: 0 2rem;
     }
 
     img {
@@ -66,6 +72,10 @@
         border: 1px solid #000;
         align-self: center;
         padding-left: 1rem;
+    }
+
+    input:focus {
+        outline: none;
     }
 
     a {
@@ -105,22 +115,16 @@
     }
 
     .results {
-        background-color: violet;
-        height: 30rem;
         margin-top: -1.4rem;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        z-index: 1;
-        border-radius: 10px;
-        border: 1px solid #000;
+        position: relative;
     }
 
     .content {
         grid-column: 1 / -1;
         grid-row: 2 / -1;
+        background-color: aqua;
     }
 
-    .logo, .buttons {
-        padding: 1rem 2rem;
-    }
 </style>
