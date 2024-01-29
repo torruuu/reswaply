@@ -1,12 +1,20 @@
 <script>
     import Results from "./Results.svelte";
+    import { createEventDispatcher } from "svelte";
+
+    let dispatch = createEventDispatcher();
 
     export let products = '';
     export let login = false;
     let filteredText = '';
     let inputFocus = false;
 
-    console.log(products);
+    function searchHandler(e) {
+        filteredText = '';
+        dispatch("search", {
+            product: e.detail.product
+        });
+    }
 
 </script>
 
@@ -24,7 +32,7 @@
         {#if login}
             <a href="/profile/products">Favoritos</a>
             <a href="/profile/products">Profile</a>
-            <a href="/profile/products" class="product">Subir producto</a>
+            <a href="/upload" class="product">Subir producto</a>
         {:else}
             <a href="/login">Log in</a>
             <a href="/register">Register</a>
@@ -33,7 +41,7 @@
 
     {#if filteredText !== "" && inputFocus}
         <div class="results">
-            <Results products={products} filteredText={filteredText}/>
+            <Results products={products} filteredText={filteredText} on:search={searchHandler}/>
         </div>
     {/if}
 

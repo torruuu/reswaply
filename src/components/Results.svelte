@@ -1,6 +1,9 @@
 <script>
+    import { createEventDispatcher } from "svelte";
     export let products = '';
     export let filteredText = '';
+
+    let dispatch = createEventDispatcher();
 
     let resultadosFiltrados = [];
     let uniqueNames = [];
@@ -62,17 +65,23 @@
 
 <div class="container">
     {#each resultadosFiltrados as product}
-        <a href="/results/{product.name}" class="product">
+        <button class="product" on:mousedown={(e) => {
+            if(e.button === 0) {
+                dispatch("search", {
+                    product: product.name
+                })
+            }
+        }}>
             <img src={product.img} alt={product.name}>
             <span>{product.name}</span>
-        </a>
+        </button>
     {/each}
 </div>
 
 <style>
     .container {
         width: 100%;
-        height: 500px;
+        height: 25rem;
         background-color: #fff;
         position: absolute;
         border-radius: 10px;
@@ -88,11 +97,15 @@
         width: auto;
     }
 
-    a {
-        text-decoration: none;
+    button {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;
     }
 
-    a:hover {
+    button:hover {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
 

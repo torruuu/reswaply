@@ -5,8 +5,8 @@
       "product": {
         "name": "Iphone X",
         "brand": "Apple",
-        "category": "Móviles",
-        "color": "Plata",
+        "category": "mobiles",
+        "color": "plata",
         "storage": 64,
         "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
         "id": 1
@@ -23,8 +23,8 @@
       "product": {
         "name": "Galaxy Tab A8",
         "brand": "Samsung",
-        "category": "Tablets",
-        "color": "Grey",
+        "category": "tablets",
+        "color": "gris",
         "storage": 32,
         "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
         "id": 3
@@ -41,8 +41,8 @@
       "product": {
         "name": "Playstation 4 Slim",
         "brand": "Sony",
-        "category": "Consolas",
-        "color": "Black",
+        "category": "consoles",
+        "color": "negro",
         "storage": 500,
         "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
         "id": 2
@@ -59,8 +59,8 @@
     {
       "name": "Iphone X",
       "brand": "Apple",
-      "category": "Móviles",
-      "color": "Plata",
+      "category": "mobiles",
+      "color": "plata",
       "storage": 64,
       "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
       "id": 1
@@ -68,8 +68,8 @@
     {
       "name": "Playstation 4 Slim",
       "brand": "Sony",
-      "category": "Consolas",
-      "color": "Black",
+      "category": "consoles",
+      "color": "negro",
       "storage": 500,
       "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
       "id": 2
@@ -77,8 +77,8 @@
     {
       "name": "Galaxy Tab A8",
       "brand": "Samsung",
-      "category": "Tablets",
-      "color": "Grey",
+      "category": "tablets",
+      "color": "gris",
       "storage": 32,
       "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
       "id": 3
@@ -86,8 +86,8 @@
     {
       "name": "Galaxy S23",
       "brand": "Samsung",
-      "category": "Móviles",
-      "color": "Blanco",
+      "category": "mobiles",
+      "color": "blanco",
       "storage": 64,
       "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
       "id": 4
@@ -95,8 +95,8 @@
     {
         "name": "Iphone 13",
         "brand": "Apple",
-        "category": "Móviles",
-        "color": "Medianoche",
+        "category": "mobiles",
+        "color": "medianoche",
         "storage": 128,
         "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
         "id": 5
@@ -104,8 +104,8 @@
     {
         "name": "Iphone 13",
         "brand": "Apple",
-        "category": "Móviles",
-        "color": "Medianoche",
+        "category": "mobiles",
+        "color": "medianoche",
         "storage": 256,
         "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
         "id": 6
