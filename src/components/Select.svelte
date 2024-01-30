@@ -1,11 +1,31 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
+    let dispatch = createEventDispatcher();
     export let values;
     export let enabled = true;
     let showValues = false;
+    let clickOut;
     let selectedValue;
+
+    function selectHandler(e) {
+        if(e.button === 0) {
+            selectedValue = e.target.innerText;
+        }
+        dispatch("select", {
+            value: selectedValue
+        });
+    }
 </script>
 
-<button disabled={!enabled} on:click={() => showValues = !showValues}
+<button disabled={!enabled} on:click={() => {
+    if (clickOut) {
+        showValues = false;
+        clickOut = false;
+        return;
+    }
+    showValues = !showValues;
+}}
     class:active={showValues}
     class="main-button">
     {selectedValue ? selectedValue : "Ej:Apple"}
@@ -13,14 +33,12 @@
 
 {#if showValues}
     <div class="values">
-        <input type="text" class="searcher" autofocus on:focusout={() => showValues = !showValues}>
+        <input type="text" class="searcher" autofocus on:focusout={() => {
+            showValues = !showValues;
+            clickOut = true;
+        }}>
         {#each values as value}
-            <button class="value" on:mousedown={(e) => {
-                if(e.button === 0) {
-                    selectedValue = value;
-                    showValues = !showValues;
-                }
-            }}>{value}</button>
+            <button class="value" on:mousedown={selectHandler}>{value}</button>
         {/each}
     </div>
 {/if}
