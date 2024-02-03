@@ -5,7 +5,7 @@
     export let data;
 
     function searchHandler(e) {
-        goto('/results/' + e.detail.product);
+        goto('/results/' + e.detail.product, {replaceState: true});
     }
 </script>
 

@@ -1,21 +1,31 @@
 <script>
+	import { onMount } from "svelte";
     import { createEventDispatcher } from "svelte";
 
-    let dispatch = createEventDispatcher();
-    export let values;
     export let enabled = true;
+    export let selectedValue;
     let showValues = false;
     let clickOut;
-    let selectedValue;
+    let inputValue = '';
+    let dispatch = createEventDispatcher();
 
-    function selectHandler(e) {
-        if(e.button === 0) {
-            selectedValue = e.target.innerText;
-        }
-        dispatch("select", {
-            value: selectedValue
+    onMount(() => {
+        selectedValue = undefined;
+    })
+
+    function searchHandler() {
+        dispatch('search', {
+            value: inputValue
         });
     }
+
+    function focusoutHandler() {
+        dispatch('exit');
+        inputValue = '';
+        showValues = !showValues;
+        clickOut = true;
+    }
+
 </script>
 
 <button disabled={!enabled} on:click={() => {
@@ -33,18 +43,13 @@
 
 {#if showValues}
     <div class="values">
-        <input type="text" class="searcher" autofocus on:focusout={() => {
-            showValues = !showValues;
-            clickOut = true;
-        }}>
-        {#each values as value}
-            <button class="value" on:mousedown={selectHandler}>{value}</button>
-        {/each}
+        <input type="text" class="searcher" bind:value={inputValue} autofocus on:input={searchHandler} on:focusout={focusoutHandler}>
+        <slot />
     </div>
 {/if}
 
 <style>
-    .main-button, .value, .searcher {
+    .main-button, .searcher {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -71,10 +76,5 @@
     .searcher {
         outline: none;
         height: 30px;
-    }
-
-    .value {
-        height: 50px;
-        text-align: left;
     }
 </style>
