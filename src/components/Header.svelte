@@ -132,7 +132,6 @@
     .content {
         grid-column: 1 / -1;
         grid-row: 2 / -1;
-        background-color: aqua;
     }
 
 </style>

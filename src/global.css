@@ -7,6 +7,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: hsla(0, 0%, 7%, .03);
+    /* background-color: hsla(0, 0%, 7%, .07); */
+    background-color: rgb(235, 235, 235);
     font-size: 18px;
+}
+
+input::placeholder {
+    color: #707070;
 }

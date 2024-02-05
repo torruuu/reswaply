@@ -93,22 +93,22 @@
       "id": 4
     },
     {
-        "name": "Iphone 13",
-        "brand": "Apple",
-        "category": "mobiles",
-        "color": "medianoche",
-        "storage": 128,
-        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
-        "id": 5
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "medianoche",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+      "id": 5
     },
     {
-        "name": "Iphone 13",
-        "brand": "Apple",
-        "category": "mobiles",
-        "color": "medianoche",
-        "storage": 256,
-        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
-        "id": 6
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "medianoche",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+      "id": 6
     }
   ],
   "users": [
@@ -142,6 +142,24 @@
       "address": null,
       "card": null,
       "id": 2
+    }
+  ],
+  "conditions": [
+    {
+      "state": "Sin abrir",
+      "description": "Conserva el precinto"
+    },
+    {
+      "state": "Nuevo",
+      "description": "Nunca se ha usado"
+    },
+    {
+      "state": "Como nuevo",
+      "description": "En perfectas condiciones"
+    },
+    {
+      "state": "Correcto",
+      "description": "Bastante usado, pero bien conservado"
     }
   ]
 }

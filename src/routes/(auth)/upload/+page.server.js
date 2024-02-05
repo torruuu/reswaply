@@ -1,6 +1,9 @@
 export async function load() {
-    const response = await fetch("http://localhost:4000/products");
-    const products = await response.json();
+    const responseProducts = await fetch("http://localhost:4000/products?_sort=name&_order=asc");
+    const products = await responseProducts.json();
 
-    return { products }
+    const responseConditions = await fetch("http://localhost:4000/conditions");
+    const conditions = await responseConditions.json();
+
+    return { products, conditions }
 }
