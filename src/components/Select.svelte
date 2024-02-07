@@ -118,6 +118,6 @@
     }
 
     .placeholder {
-        color: #707070;
+        color: #999;
     }
 </style>

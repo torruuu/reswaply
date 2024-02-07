@@ -67,6 +67,7 @@
         grid-template-rows: 5rem auto;
         
         background-color: #fff;
+        border-bottom: 0.1rem solid rgb(205, 205, 205);
         padding: 0 2rem;
     }
 

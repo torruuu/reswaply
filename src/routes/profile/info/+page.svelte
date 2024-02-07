@@ -67,7 +67,7 @@
     }
 
     .user-info, .address, .payments {
-        /* background-color: aquamarine; */
+        background-color: #fff;
         border: 1px solid #000;
         border-radius: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
