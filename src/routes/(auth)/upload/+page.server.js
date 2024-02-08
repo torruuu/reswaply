@@ -41,12 +41,14 @@ export const actions = {
             });
 
             if (responseInsert.ok) {
+                cookies.set('productUpload', true, { path: '/profile/products' });
                 throw redirect(302, '/profile/products');
             }
         }
 
         return {
             error: true,
+            title: 'Error',
             message: "Error al subir el producto",
         }
     }

@@ -3,7 +3,7 @@
     export let data;
 </script>
 
-{#if data.registrado}
+{#if data.authenticated}
     <h1>Bienvenido {data.userName}</h1>
 {/if}
 

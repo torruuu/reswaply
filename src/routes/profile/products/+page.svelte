@@ -1,8 +1,14 @@
 <script>
-	import UserProduct from "../../../components/UserProduct.svelte";
+	import Alert from "../../../components/Alert.svelte";
+    import UserProduct from "../../../components/UserProduct.svelte";
 
     export let data;
+    let showAlert = data.showAlert;
 </script>
+
+{#if showAlert}
+    <Alert title={'Éxito'} description={'Producto añadido con éxito'} on:close={() => showAlert = false}/>
+{/if}
 
 <div class="container">
     {#if data.userPosts.length !== 0}
