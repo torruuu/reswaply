@@ -3,11 +3,22 @@
     import UserProduct from "../../../components/UserProduct.svelte";
 
     export let data;
-    let showAlert = data.showAlert;
+    export let form;
+    let showUploadAlert = data.showAlert;
+    let showErrorDelete = form?.error;
+    let showSuccessDelete = form?.success;
 </script>
 
-{#if showAlert}
-    <Alert title={'Éxito'} description={'Producto añadido con éxito'} on:close={() => showAlert = false}/>
+{#if showUploadAlert}
+    <Alert title={'Éxito'} description={'Producto añadido con éxito'} on:close={() => showUploadAlert = false}/>
+{/if}
+
+{#if showErrorDelete}
+    <Alert title={form.title} description={form.message} on:close={() => showErrorDelete = false}/>
+{/if}
+
+{#if showSuccessDelete}
+    <Alert title={form.title} description={form.message} on:close={() => showSuccessDelete = false}/>
 {/if}
 
 <div class="container">

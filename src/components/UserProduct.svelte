@@ -1,14 +1,25 @@
 <script>
+	import Overlay from "./Overlay.svelte";
+
     export let post;
 
-    let link = "/posts/" + post.id;
+    let postId = post.id;
+    let link = "/posts/" + postId;
     let img = post.product.img;
     let title = post.product.name;
     let storage = post.product.storage;
     let color = post.product.color;
     let price = post.price;
     let status = post.condition;
+
+    let showOverlay = false;
 </script>
+
+{#if showOverlay}
+    <Overlay action={'/profile/products?/delete'} on:close={() => showOverlay = false}>
+        <input type="hidden" name="id" value={postId}>
+    </Overlay>
+{/if}
 
 <div class="container">
     <a href={link} class="image">
@@ -28,10 +39,16 @@
     </div>
     <div class="buttons">
         <div class="trash icon">
-            <i class="fa-solid fa-trash"></i>
+            <button on:click={() => showOverlay = true}>
+                <i class="fa-solid fa-trash"></i>
+            </button>
         </div>
         <div class="edit icon">
-            <i class="fa-solid fa-pen"></i>
+            <form action="/profile/products?/edit">
+                <button>
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+            </form>
         </div>
     </div>  
 </div>
@@ -93,8 +110,13 @@
         justify-content: space-around;
     }
 
-    i {
+    button {
+        background: none;
+        border: none;
         cursor: pointer;
+    }
+
+    i {
         font-size: 1.5rem;
     }
 </style>

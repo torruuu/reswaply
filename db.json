@@ -53,24 +53,6 @@
       "sold": true,
       "buyer": "Alejandro",
       "id": 2
-    },
-    {
-      "seller": "Alejandro",
-      "product": {
-        "name": "Iphone X",
-        "brand": "Apple",
-        "category": "mobiles",
-        "color": "plata",
-        "storage": 64,
-        "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
-        "id": 1
-      },
-      "condition": "Como nuevo",
-      "description": "Un poco roto",
-      "price": "400",
-      "sold": false,
-      "buyer": null,
-      "id": 3
     }
   ],
   "products": [
