@@ -1,9 +1,20 @@
 <script>
+	import { onMount } from 'svelte';
 	import Select from './Select.svelte';
+
+  onMount(() => {
+    if (post) {
+      categorySelected = post.product.category;
+      price = post.price;
+      description = post.description;
+    }
+  })
 
   export let data;
   export let buttonValue = 'Subir Producto';
   export let editable = true;
+  export let post;
+  export let action = '';
   let products = data.products;
   let conditions = data.conditions;
 
@@ -14,6 +25,8 @@
   let productSelected;
   let productIdSelected;
   let conditionSelected;
+  let price;
+  let description;
 
   let uniqueBrands = new Set();
   let brands = [];
@@ -63,11 +76,16 @@
 
     brands = [...uniqueBrands];
     brands = orderArrayByRegex(brands, '');
+
+    brandSelected = undefined;
+    productSelected = undefined;
+    productIdSelected = undefined;
+    conditionSelected = undefined;
   }
 
   // Actualiza el Set de marcas únicas
   $: {
-    if (productSelected) {
+    if (productSelected && conditionSelected && price && description) {
       buttonDisabled = false;
     } else {
       buttonDisabled = true;
@@ -77,24 +95,24 @@
 
 <div class="main-container">
 
-  <form method="post">
+  <form method="post" action={action}>
     <div class="form-content">
-      <h2>Sube tu producto</h2>
+      <h2>{!editable ? 'Edita tu producto' : 'Sube tu producto'}</h2>
 
       <div class="category-content">
         <h3>Tipo de producto</h3>
         <div class="category-buttons">
-          <label class="category-button">
+          <label class="category-button" class:pointer={editable}>
             <input type="radio" name="category" value="consoles" bind:group={categorySelected} on:change={categoryHandler} disabled={!editable}>
             <i class="fa-solid fa-gamepad"></i>
             <span>Consola</span>
           </label>
-          <label class="category-button">
+          <label class="category-button" class:pointer={editable}>
             <input type="radio" name="category" value="mobiles" bind:group={categorySelected} on:change={categoryHandler} disabled={!editable}>
             <i class="fa-solid fa-mobile-screen-button"></i>
             <span>Móvil</span>
           </label>
-          <label class="category-button">
+          <label class="category-button" class:pointer={editable}>
             <input type="radio" name="category" value="tablets" bind:group={categorySelected} on:change={categoryHandler} disabled={!editable}>
             <i class="fa-solid fa-tablet-screen-button"></i>
             <span>Tablet</span>
@@ -105,9 +123,13 @@
       <div class="product-content">
         <h3>Información básica</h3>
         <h5>Marca</h5>
-        {#key categorySelected}
           <Select placeholder={'Ej: Apple'} enabled={categorySelected !== undefined && editable} bind:selectedValue={brandSelected} on:search={searchBrand} on:exit={() => {
             brands = orderArrayByRegex(brands, '');
+          }}
+          on:mount={() => {
+            if (post) {
+              brandSelected = post.product.brand;
+            }
           }}>
             {#each brands as value}
               <button class="value" on:mousedown={(e) => {
@@ -122,10 +144,15 @@
 
           <h5>Producto</h5>
           {#key brandSelected}
-            <Select placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
+            <Select reset placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
               products = data.products;
               products = products
                 .filter(product => product.brand === brandSelected);
+            }}
+            on:mount={() => {
+              if (post) {
+                productSelected = post.product.name;
+              }
             }}>
               {#each products as value}
                 <button class="value" on:mousedown={(e) => {
@@ -137,36 +164,42 @@
               {/each}
             </Select>
           {/key}
-        {/key}
       </div>
 
       <div class="detail-content">
-        {#key productSelected}
-          <h3>Información del producto</h3>
-          <h5>Estado del producto</h5>
+        <h3>Información del producto</h3>
+        <h5>Estado del producto</h5>
+        {#key productIdSelected}
           <Select placeholder={'Escoge un estado'} bind:selectedValue={conditionSelected} on:search={searchCondition}
           on:exit={() => {
             conditions = data.conditions;
+          }}
+          on:mount={() => {
+            if (post) {
+              conditionSelected = post.condition;
+            }
+            price = undefined;
+            description = undefined;
           }}>
             {#each conditions as {state, description}}
-                <button class="value" on:mousedown={(e) => {
-                  if (e.button === 0) {
-                    conditionSelected = state;
-                  }
-                }}>{state} {description}</button>
-              {/each}
+              <button class="value" on:mousedown={(e) => {
+                if (e.button === 0) {
+                  conditionSelected = state;
+                }
+              }}>{state} {description}</button>
+            {/each}
           </Select>
-
-          <div class="price">
-            <h5>Precio</h5>
-            <h5>Moneda</h5>
-            <input type="number" placeholder="Sé razonable..." name="price">
-            <span>€</span>
-          </div>
-
-          <h5>Descripción del producto</h5>
-          <textarea name="description" id="description" cols="30" rows="10" placeholder="Cuéntanos más. ¿Usado o nuevo? ¿Rojo o amarillo? ¿Tiene algún golpecito?"></textarea>
         {/key}
+
+        <div class="price">
+          <h5>Precio</h5>
+          <h5>Moneda</h5>
+          <input type="number" placeholder="Sé razonable..." name="price" bind:value={price}>
+          <span>€</span>
+        </div>
+
+        <h5>Descripción del producto</h5>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="Cuéntanos más. ¿Usado o nuevo? ¿Rojo o amarillo? ¿Tiene algún golpecito?" bind:value={description}></textarea>
       </div>
 
       <button type="submit" disabled={buttonDisabled} class="submit" class:disabled={buttonDisabled}>{buttonValue}</button>
@@ -174,6 +207,10 @@
 
     <input type="hidden" name="product" value={productIdSelected}>
     <input type="hidden" name="condition" value={conditionSelected}>
+
+    {#if post}
+      <input type="hidden" name="post" value={post.id}>
+    {/if}
       
   </form>
 </div>
@@ -251,19 +288,22 @@
 
   .category-button {
     display: inline-block;
-    cursor: pointer;
     display: grid;
     align-items: center;
     justify-items: center;
     gap: 0.4rem;
   }
 
-  .category-button:hover .fa-solid {
+  .pointer {
+    cursor: pointer;
+  }
+
+  input[type="radio"]:enabled:hover + .fa-solid {
     border: 0.2rem solid #000;
     color: #000;
   }
 
-  input[type="radio"]:checked + .fa-solid {
+  .category-button input[type="radio"]:checked + .fa-solid {
     background-color: #000;
     color: #fff;
   }
@@ -277,6 +317,10 @@
     background-color: transparent;
     border-top: 0.1rem solid rgb(205, 205, 205);
     padding-left: 0.3rem;
+  }
+
+  .value:hover {
+    background-color: rgb(205, 205, 205);
   }
 
   .price {

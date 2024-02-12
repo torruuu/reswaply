@@ -5,20 +5,20 @@
     export let data;
     export let form;
     let showUploadAlert = data.showAlert;
-    let showErrorDelete = form?.error;
-    let showSuccessDelete = form?.success;
+    let showErrorForm = form?.error;
+    let showSuccessForm = form?.success;
 </script>
 
 {#if showUploadAlert}
     <Alert title={'Éxito'} description={'Producto añadido con éxito'} on:close={() => showUploadAlert = false}/>
 {/if}
 
-{#if showErrorDelete}
-    <Alert title={form.title} description={form.message} on:close={() => showErrorDelete = false}/>
+{#if showErrorForm}
+    <Alert type={'error'} title={form.title} description={form.message} on:close={() => showErrorForm = false}/>
 {/if}
 
-{#if showSuccessDelete}
-    <Alert title={form.title} description={form.message} on:close={() => showSuccessDelete = false}/>
+{#if showSuccessForm}
+    <Alert title={form.title} description={form.message} on:close={() => showSuccessForm = false}/>
 {/if}
 
 <div class="container">

@@ -44,11 +44,9 @@
             </button>
         </div>
         <div class="edit icon">
-            <form action="/profile/products?/edit">
-                <button>
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </form>
+            <a href={'/update-product/' + postId}>
+                <i class="fa-solid fa-pen"></i>
+            </a>
         </div>
     </div>  
 </div>

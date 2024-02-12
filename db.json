@@ -31,7 +31,7 @@
       },
       "condition": "Poco usado",
       "description": "Portátil asus en buen estado",
-      "price": 800,
+      "price": "800",
       "sold": false,
       "buyer": null,
       "id": 2

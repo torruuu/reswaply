@@ -1,5 +1,3 @@
-import { redirect } from '@sveltejs/kit';
-
 export async function load({ cookies, fetch }) {
     const userName = cookies.get('user');
     const productUpload = cookies.get('productUpload');
@@ -38,6 +36,40 @@ export const actions = {
             error: true,
             title: 'Error',
             message: "Error al borrar el producto",
+        }
+    },
+
+    edit: async ({ request }) => {
+        const data = await request.formData(); // Recogemos los datos del formulario
+        const postId = data.get('post');
+        const condition = data.get('condition');
+        const price = data.get('price');
+        const description = data.get('description');
+
+        const responseUpdate = await fetch('http://localhost:4000/posts/' + postId, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                "condition": condition,
+                "description": description,
+                "price": price
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (responseUpdate.ok) {
+            return {
+                success: true,
+                title: 'Éxito',
+                message: 'Producto modificado con éxito'
+            };
+        }
+
+        return {
+            error: true,
+            title: 'Error',
+            message: "Error al modificar el producto",
         }
     }
 }
