@@ -5,7 +5,6 @@
     export let enabled = true;
     export let selectedValue;
     export let placeholder = "Select";
-    export let reset = true;
     let showValues = false;
     let clickOut;
     let inputValue = '';

@@ -1,5 +1,7 @@
 <script>
 	import Alert from "../../../components/Alert.svelte";
+    import NoFound from "../../../components/NoFound.svelte";
+	import ProfileDescription from "../../../components/ProfileDescription.svelte";
     import UserProduct from "../../../components/UserProduct.svelte";
 
     export let data;
@@ -21,6 +23,8 @@
     <Alert title={form.title} description={form.message} on:close={() => showSuccessForm = false}/>
 {/if}
 
+<ProfileDescription title={'Productos'} description={'Consulta y modifica tus productos'} />
+
 <div class="container">
     {#if data.userPosts.length !== 0}
         <div class="posts">
@@ -29,7 +33,7 @@
             {/each}
         </div>
     {:else}
-        <h2>No tiene productos en venta</h2>
+        <NoFound description={'¡Aún no has subido nada a Reswaply'} buttonValue={'¡Empieza a vender!'} redirect={'/upload'} />
     {/if}
 </div>
 

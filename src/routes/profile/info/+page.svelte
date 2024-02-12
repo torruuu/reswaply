@@ -1,4 +1,6 @@
 <script>
+	import ProfileDescription from "../../../components/ProfileDescription.svelte";
+
     export let data;
 
     const userName = data.userName;
@@ -8,8 +10,7 @@
     const cardholder = data.cardholder;
 </script>
 
-<h2>Perfil</h2>
-<p class="subtitle">Modifica tus datos personales</p>
+<ProfileDescription title={'Perfil'} description={'Modifica tus datos personales'} />
 
 <div class="container">
     <div class="user-info">
@@ -83,17 +84,6 @@
 
         flex: 1;
         min-width: max-content;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin: 2rem 0 1rem;
-    }
-
-    .subtitle {
-        text-align: center;
-        font-size: 0.9rem;
     }
 
     h4 {
