@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #000;
 }
 
@@ -10,6 +15,7 @@ body {
     /* background-color: hsla(0, 0%, 7%, .07); */
     background-color: rgb(235, 235, 235);
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 input::placeholder {

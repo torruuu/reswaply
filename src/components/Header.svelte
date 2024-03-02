@@ -18,6 +18,7 @@
 
 </script>
 
+<div class="margin"></div>
 <div class="container">
     <div class="logo">
         <a class="logo-content" href="/">
@@ -59,7 +60,13 @@
         flex-direction: column;
     } */
 
+    .margin {
+        margin-bottom: 5rem;
+    }
+
     .container {
+        position: fixed;
+        top: 0;
         display: grid;
         column-gap: 2rem;
         width: 100%;
@@ -89,6 +96,7 @@
 
     a {
         text-decoration: none;
+        font-weight: 600;
     }
 
     .buttons {
@@ -128,11 +136,6 @@
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         position: relative;
-    }
-
-    .content {
-        grid-column: 1 / -1;
-        grid-row: 2 / -1;
     }
 
 </style>

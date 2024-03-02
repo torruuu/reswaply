@@ -13,7 +13,7 @@
   export let data;
   export let buttonValue = 'Subir Producto';
   export let editable = true;
-  export let post;
+  export let post = undefined;
   export let action = '';
   let products = data.products;
   let conditions = data.conditions;
@@ -135,6 +135,7 @@
               <button class="value" on:mousedown={(e) => {
                 if (e.button === 0) {
                   brandSelected = value;
+                  products = data.products;
                   products = products
                     .filter(product => product.brand === brandSelected);
                 }

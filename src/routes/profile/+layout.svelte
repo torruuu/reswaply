@@ -9,8 +9,16 @@
     }
 </script>
 
-{#key path}
-    <ProfileHeader path={path}/>
-{/key}
+<div class="container">
+    {#key path}
+        <ProfileHeader path={path}/>
+    {/key}
 
-<slot />
+    <slot />
+</div>
+
+<style>
+    .container {
+        margin-bottom: 5rem;
+    }
+</style>

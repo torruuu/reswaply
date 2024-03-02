@@ -2,6 +2,7 @@
 	import Header from '../components/Header.svelte';
     import { goto } from '$app/navigation';
     import '../global.css';
+	import Footer from '../components/Footer.svelte';
     export let data;
 
     function searchHandler(e) {
@@ -11,4 +12,5 @@
 
 <Header login={data.authenticated} products={data.products} on:search={searchHandler}>
     <slot />
+    <Footer />
 </Header>

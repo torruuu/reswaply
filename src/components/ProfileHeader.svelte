@@ -30,7 +30,7 @@
 
 <style>
     nav {
-        margin-top: 2rem;
+        margin-top: 7rem;
         width: 100vw;
         display: flex;
         justify-content: center;
@@ -65,11 +65,11 @@
         padding: 0.5rem;
         text-decoration: none;
         border-radius: 20px;
+        font-weight: 400;
     }
 
-    a:hover,
     .active {
-        background-color: #c7c7c7;
+      font-weight: 700;
     }
 
     .logout {

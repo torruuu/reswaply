@@ -42,7 +42,7 @@
         class:active={showValues}
         class="main-button">
         <div class="text-value">
-            <span class:placeholder={!selectedValue}>{selectedValue ? selectedValue : placeholder}</span>
+            <span class:selected-value={selectedValue} class:placeholder={!selectedValue}>{selectedValue ? selectedValue : placeholder}</span>
         </div>
         <div class="icon">
             <i class="fa-solid fa-chevron-down"></i>
@@ -116,6 +116,10 @@
         border: none;
         outline: none;
         height: 30px;
+    }
+
+    .selected-value {
+        font-weight: 500;
     }
 
     .placeholder {
