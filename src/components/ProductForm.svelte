@@ -144,7 +144,7 @@
 
           <h5>Producto</h5>
           {#key brandSelected}
-            <Select reset placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
+            <Select placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
               products = data.products;
               products = products
                 .filter(product => product.brand === brandSelected);

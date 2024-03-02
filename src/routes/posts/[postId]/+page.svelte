@@ -1,5 +1,20 @@
 <script>
+	import Detail from "../../../components/Detail.svelte";
+
     export let data;
+    const post = data.post;
+    const user = data.userName;
+    console.log('user:' + user);
 </script>
 
-<p>Estas visualizando el producto {data.post.product.name} de {data.post.seller}</p>
+<div class="container">
+    <Detail post={post} user={user} />
+</div>
+
+<style>
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>

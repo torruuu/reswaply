@@ -1,7 +1,7 @@
 <script>
     import NoFound from '../../../components/NoFound.svelte';
-import ProfileDescription from '../../../components/ProfileDescription.svelte';
-import SoldProduct from '../../../components/SoldProduct.svelte';
+    import ProfileDescription from '../../../components/ProfileDescription.svelte';
+    import SoldProduct from '../../../components/SoldProduct.svelte';
 
     export let data;
     const visualizer = data.userName;
@@ -34,9 +34,5 @@ import SoldProduct from '../../../components/SoldProduct.svelte';
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
     }
 </style>
