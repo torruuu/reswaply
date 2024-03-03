@@ -150,6 +150,7 @@
         "year": "25",
         "cvc": "123"
       },
+      "likes": [],
       "id": 1
     },
     {
@@ -159,6 +160,7 @@
       "balance": 0,
       "address": null,
       "card": null,
+      "likes": [],
       "id": 2
     }
   ],

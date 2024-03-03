@@ -1,5 +1,6 @@
 <script>
-    import Results from "./Results.svelte";
+    import Footer from "./Footer.svelte";
+import Results from "./Results.svelte";
     import { createEventDispatcher } from "svelte";
 
     let dispatch = createEventDispatcher();
@@ -19,37 +20,44 @@
 </script>
 
 <div class="margin"></div>
-<div class="container">
-    <div class="logo">
-        <a class="logo-content" href="/">
-            <img src="/images/logo-reswaply.png" alt="Logo">
-            <span>Swaply</span>
-        </a>
-    </div>
 
-    <input type="text" class="search-bar" placeholder="¿Qué andas buscando?" bind:value={filteredText} on:focusin={() => inputFocus = true} on:focusout={() => inputFocus = false}>
-
-    <div class="buttons">
-        {#if login}
-            <a href="/profile/products">Favoritos</a>
-            <a href="/profile/products">Profile</a>
-            <a href="/upload" class="product">Subir producto</a>
-        {:else}
-            <a href="/login">Log in</a>
-            <a href="/register">Register</a>
-        {/if}
-    </div>
-
-    {#if filteredText !== "" && inputFocus}
-        <div class="results">
-            <Results products={products} filteredText={filteredText} on:search={searchHandler}/>
+<div class="main-container">
+    <div class="container">
+        <div class="logo">
+            <a class="logo-content" href="/">
+                <img src="/images/logo-reswaply.png" alt="Logo">
+                <span>Swaply</span>
+            </a>
         </div>
-    {/if}
-
-</div>
-
-<div class="content">
-    <slot />
+    
+        <input type="text" class="search-bar" placeholder="¿Qué andas buscando?" bind:value={filteredText} on:focusin={() => inputFocus = true} on:focusout={() => inputFocus = false}>
+    
+        <div class="buttons">
+            {#if login}
+                <a href="/profile/products">Favoritos</a>
+                <a href="/profile/products">Profile</a>
+                <a href="/upload" class="product">Subir producto</a>
+            {:else}
+                <a href="/login">Log in</a>
+                <a href="/register">Register</a>
+            {/if}
+        </div>
+    
+        {#if filteredText !== "" && inputFocus}
+            <div class="results">
+                <Results products={products} filteredText={filteredText} on:search={searchHandler}/>
+            </div>
+        {/if}
+    
+    </div>
+    
+    <div class="content">
+        <slot />
+    </div>
+    
+    <div class="footer">
+        <Footer />
+    </div>
 </div>
 
 <style>
@@ -60,12 +68,20 @@
         flex-direction: column;
     } */
 
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 5rem);
+        justify-content: space-between;
+    }
+
     .margin {
-        margin-bottom: 5rem;
+        height: 5rem;
     }
 
     .container {
         position: fixed;
+        z-index: 1;
         top: 0;
         display: grid;
         column-gap: 2rem;

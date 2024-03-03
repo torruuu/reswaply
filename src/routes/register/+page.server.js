@@ -23,7 +23,8 @@ export const actions = {
                     "password": formPassword,
                     "balance": 0,
                     "address": null,
-                    "card": null
+                    "card": null,
+                    "likes": []
                 }),
                 headers: {
                     'Content-Type': 'application/json'

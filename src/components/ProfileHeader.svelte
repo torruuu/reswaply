@@ -30,7 +30,7 @@
 
 <style>
     nav {
-        margin-top: 7rem;
+        margin-top: 2rem;
         width: 100vw;
         display: flex;
         justify-content: center;

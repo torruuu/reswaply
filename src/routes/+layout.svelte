@@ -1,8 +1,7 @@
 <script>
-	import Header from '../components/Header.svelte';
+	import Layout from '../components/Layout.svelte';
     import { goto } from '$app/navigation';
     import '../global.css';
-	import Footer from '../components/Footer.svelte';
     export let data;
 
     function searchHandler(e) {
@@ -10,7 +9,6 @@
     }
 </script>
 
-<Header login={data.authenticated} products={data.products} on:search={searchHandler}>
+<Layout login={data.authenticated} products={data.products} on:search={searchHandler}>
     <slot />
-    <Footer />
-</Header>
+</Layout>

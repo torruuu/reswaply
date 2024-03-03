@@ -2,14 +2,21 @@
 	import Detail from "../../../components/Detail.svelte";
 
     export let data;
+    export let form;
     const post = data.post;
     const user = data.userName;
-    console.log('user:' + user);
+    let liked = data.isLiked;
+
+    $: {
+        liked = data.isLiked;
+    }
 </script>
 
-<div class="container">
-    <Detail post={post} user={user} />
-</div>
+{#key form}
+    <div class="container">
+        <Detail post={post} user={user} liked={liked} />
+    </div>
+{/key}
 
 <style>
     .container {

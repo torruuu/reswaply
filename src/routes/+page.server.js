@@ -1,7 +1,7 @@
-export async function load({ cookies }) {
-    const responsePosts = await fetch("http://localhost:4000/posts?sold=false");
-    const posts = await responsePosts.json();
-
+export async function load({ cookies, parent }) {
     const userName = cookies.get('user');
-    return { posts, userName }
+    const { posts } = await parent();
+    const filteredPosts = posts.filter(post => !post.sold && post.seller !== userName);
+
+    return { userName, filteredPosts }
 }
