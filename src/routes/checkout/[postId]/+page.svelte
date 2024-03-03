@@ -15,6 +15,7 @@
     const cardNumber = data.cardNumber;
     const cardholder = data.cardholder;
     let buttonDisabled = true;
+    let showSuccess = true;
 
     $: {
         if (address && cardNumber) {
@@ -30,7 +31,7 @@
 </script>
 
 <div class="container">
-    <div class="content">
+    <div class="purchase-content">
         <h1>Tramitar pedido</h1>
         <div class="purchase-info">
             <div class="product-info">

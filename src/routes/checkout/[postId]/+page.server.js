@@ -11,7 +11,7 @@ export async function load({ params, cookies }) {
     const response = await fetch("http://localhost:4000/posts/" + postId);
     const post = await response.json();
 
-    if (userName === post.seller) {
+    if (userName === post.seller || post.sold) {
         throw redirect(303, '/posts/' + postId);
     }
     
