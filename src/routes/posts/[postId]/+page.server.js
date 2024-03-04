@@ -5,12 +5,16 @@ export async function load({ params, cookies }) {
     const response = await fetch("http://localhost:4000/posts/" + postId);
     const post = await response.json();
 
-    const responseUser = await fetch("http://localhost:4000/users?name=" + userName);
-    const user = await responseUser.json();
-    const userLikes = user[0].likes;
-    const isLiked = userLikes.find(like => like === postId);
+    if (userName) {
+        const responseUser = await fetch("http://localhost:4000/users?name=" + userName);
+        const user = await responseUser.json();
+        const userLikes = user[0].likes;
+        const isLiked = userLikes.find(like => like === postId);
 
-    return { post, userName, isLiked }
+        return { post, userName, isLiked }
+    } else {
+        return { post }
+    }
 }
 
 export const actions = {

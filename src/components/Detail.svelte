@@ -3,8 +3,8 @@
     import { enhance } from '$app/forms';
 
     export let post;
-    export let user;
-    export let liked;
+    export let user = '';
+    export let liked = null;
 
     const postId = post.id;
     const seller = post.seller;
@@ -35,7 +35,7 @@
                     <img class="user-image" src="/images/user.svg" alt="User">
                     <span>{seller}</span>
                 </div>
-                {#if (user !== seller && !sold) || (sold && liked)}
+                {#if (user !== '') && ((user !== seller && !sold) || (sold && liked))}
                     <div class="like-container">
                         <form method="post" use:enhance>
                             <button type="submit" class:button-unliked={!liked} class:button-liked={liked}>

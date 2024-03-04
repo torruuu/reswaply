@@ -16,7 +16,7 @@
         </div>
         <div class="help column">
             <h5>Ayuda</h5>
-            <span>Profesionales:¿cómo vender aquí?</span>
+            <span>Profesionales: ¿cómo vender aquí?</span>
             <span>Pago</span>
             <span>Entrega</span>
             <span>Devoluciones y Reembolsos</span>

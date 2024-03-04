@@ -14,7 +14,11 @@
 
 {#key form}
     <div class="container">
-        <Detail post={post} user={user} liked={liked} />
+        {#if user}
+            <Detail post={post} user={user} liked={liked} />
+        {:else}
+            <Detail post={post} />
+        {/if}
     </div>
 {/key}
 
