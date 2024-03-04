@@ -91,6 +91,10 @@
       buttonDisabled = true;
     }
   }
+
+  function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.substring(1);
+    }
 </script>
 
 <div class="main-container">
@@ -137,7 +141,7 @@
                   brandSelected = value;
                   products = data.products;
                   products = products
-                    .filter(product => product.brand === brandSelected);
+                    .filter(product => product.brand === brandSelected && product.category === categorySelected);
                 }
               }}>{value}</button>
             {/each}
@@ -145,7 +149,7 @@
 
           <h5>Producto</h5>
           {#key brandSelected}
-            <Select placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
+            <Select products={true} placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
               products = data.products;
               products = products
                 .filter(product => product.brand === brandSelected);
@@ -156,12 +160,22 @@
               }
             }}>
               {#each products as value}
-                <button class="value" on:mousedown={(e) => {
+                <button class="product-value" on:mousedown={(e) => {
                   if (e.button === 0) {
-                    productSelected = value.name;
+                    productSelected = value.name + ' - ' + value.storage + ' GB - ' + capitalizeFirstLetter(value.color);
                     productIdSelected = value.id;
                   }
-                }}>{value.name}</button>
+                }}>
+                <div class="product-description">
+                  <div class="image">
+                    <img src={value.img} alt={value.name}>
+                  </div>
+                  <div class="description">
+                    <h5>{value.name}</h5>
+                    <span>{value.storage} GB - {capitalizeFirstLetter(value.color)}</span>
+                  </div>
+                </div>
+                </button>
               {/each}
             </Select>
           {/key}
@@ -309,19 +323,58 @@
     color: #fff;
   }
 
-  .value {
+  .value, .product-value {
     width: 100%;
-    height: 50px;
-    text-align: left;
     cursor: pointer;
     border: none;
     background-color: transparent;
     border-top: 0.1rem solid rgb(205, 205, 205);
+  }
+
+  .value {
+    height: 50px;
+    text-align: left;
     padding-left: 0.3rem;
+  }
+
+  .product-value {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .product-description {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 9fr;
+    column-gap: 0.2rem;
+  }
+
+  .image img {
+    width: 100%;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .description h5 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .description span {
+    font-size: 1rem;
   }
 
   .value:hover {
     background-color: rgb(205, 205, 205);
+  }
+
+  .product-value:hover {
+    box-shadow: 0 0 1rem 0rem rgb(205, 205, 205);
   }
 
   .price {

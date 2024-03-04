@@ -5,6 +5,7 @@
     export let enabled = true;
     export let selectedValue;
     export let placeholder = "Select";
+    export let products = false;
     let showValues = false;
     let clickOut;
     let inputValue = '';
@@ -50,7 +51,7 @@
     </button>
     
     {#if showValues}
-        <div class="values">
+        <div class="values" class:values-extended={products}>
             <input type="text" class="searcher" bind:value={inputValue} autofocus on:input={searchHandler} on:focusout={focusoutHandler}>
             <slot />
         </div>
@@ -109,6 +110,23 @@
         top: 100%;
         left: 0;
         z-index: 1;
+    }
+
+    .values-extended {
+        max-height: 400px;
+    }
+
+    .values::-webkit-scrollbar {
+        width: 0.4rem; /* width of the entire scrollbar */
+    }
+
+    .values::-webkit-scrollbar-track {
+        background: none; /* color of the tracking area */
+    }
+
+    .values::-webkit-scrollbar-thumb {
+        background-color: #000; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
     }
 
     .searcher {
