@@ -1,32 +1,39 @@
 <script>
-    export let path;
+  import { createEventDispatcher } from "svelte";
+
+  let dispatch = createEventDispatcher();
+  export let path;
   
-    const sections = [
-      { text: 'Perfil', route: '/profile/info' },
-      { text: 'Compras', route: '/profile/shopping' },
-      { text: 'Ventas', route: '/profile/sales' },
-      { text: 'Productos', route: '/profile/products' },
-      { text: 'Favoritos', route: '/profile/favorites' },
-      { text: 'Log out', route: '/profile/logout' },
-    ];
+  const sections = [
+    { text: 'Perfil', route: '/profile/info' },
+    { text: 'Compras', route: '/profile/shopping' },
+    { text: 'Ventas', route: '/profile/sales' },
+    { text: 'Productos', route: '/profile/products' },
+    { text: 'Favoritos', route: '/profile/favorites' },
+    { text: 'Log out' },
+  ];
+
+  // Define una función para verificar si la ruta actual coincide con una determinada sección
+  const isCurrentSection = (section) => new RegExp(`^${section}`).test(path);
+
+  function handleLogout() {
+    dispatch('logout');
+  }
+</script>
   
-    // Define una función para verificar si la ruta actual coincide con una determinada sección
-    const isCurrentSection = (section) => new RegExp(`^${section}`).test(path);
-  </script>
-  
-  <nav>
-    <div class="container">
-      {#each sections as { text, route }}
-        {#if route === '/profile/logout'}
-          <div class="logout">
-            <a href={route} class:active={isCurrentSection(route)}>{text}</a>
-          </div>
-        {:else}
-          <a href={route} class:active={isCurrentSection(route)}>{text}</a>
-        {/if}
-      {/each}
-    </div>
-  </nav>
+<nav>
+  <div class="container">
+    {#each sections as section}
+      {#if section.text === 'Log out'}
+        <div class="logout">
+          <button on:click={handleLogout}>{section.text}</button>
+        </div>
+      {:else}
+        <a href={section.route} class:active={isCurrentSection(section.route)}>{section.text}</a>
+      {/if}
+    {/each}
+  </div>
+</nav>
 
 <style>
     nav {
@@ -61,11 +68,18 @@
         border-radius: 20px; /* roundness of the scroll thumb */
     }
 
-    a {
+    a, button {
         padding: 0.5rem;
         text-decoration: none;
         border-radius: 20px;
         font-weight: 400;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    button {
+      background: none;
+      border: none;
     }
 
     .active {
