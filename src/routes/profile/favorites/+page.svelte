@@ -47,7 +47,7 @@
 
     .products-content {
         width: calc(18rem * 4 + 8rem);
-        height: 35rem;
+        max-height: 35rem;
 
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));

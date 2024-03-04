@@ -1,5 +1,6 @@
 <script>
-    import Preview from '../components/Preview.svelte';
+    import Carrusel from '../components/Carrusel.svelte';
+import Preview from '../components/Preview.svelte';
     export let data;
 
     const mobiles = data.mobilePosts;
@@ -7,6 +8,8 @@
     const consoles = data.consolePosts;
 
 </script>
+
+<Carrusel />
 
 <div class="container">
     <div class="content">
@@ -51,7 +54,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-bottom: 5rem;
+        margin: 5rem 0;
     }
 
     .content {
