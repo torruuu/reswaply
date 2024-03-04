@@ -5,7 +5,7 @@
         '/images/s23.png'
     ]
 
-    let srcShowed = images[1];
+    let srcShowed = images[0];
 
     function handleRight() {
         const currentIndex = images.indexOf(srcShowed);

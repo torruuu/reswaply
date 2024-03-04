@@ -1,8 +1,14 @@
-export async function load({ params, fetch }) {
+export async function load({ params, parent, cookies }) {
     const product = params.product;
+    const user = cookies.get('user');
 
-    const response = await fetch("http://localhost:4000/posts?product.name=" + product);
-    const posts = await response.json();
+    const { posts, products } = await parent();
+    const filteredPosts = posts.filter(post => post.seller !== user)
 
-    return { posts }
+    const productSearched = products.find(p => p.name === product);
+
+    const postsSearched = filteredPosts.filter(post => post.product.name === product);
+    const similarPosts = filteredPosts.filter(post => post.product.brand === productSearched.brand && post.product.name !== product);
+
+    return { postsSearched, similarPosts, product }
 }

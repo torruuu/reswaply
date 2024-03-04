@@ -9,6 +9,7 @@
     let uniqueNames = [];
 
     $: {
+        filteredText = filteredText.toLocaleLowerCase();
         uniqueNames = [];
 
         resultadosFiltrados = products.filter(product => {
@@ -57,6 +58,12 @@
             const normalizedProductName = (product.name).toLowerCase();
             const normalizedProductBrand = (product.brand).toLowerCase();
             return !normalizedProductName.includes(filteredText) && !normalizedProductBrand.includes(filteredText) && !uniqueNames.includes(product.name);
+        }).filter(product => {
+            if (!uniqueNames.includes(product.name)) {
+                uniqueNames.push(product.name);
+                return true;
+            }
+            return false;
         });
 
         return resultadosMarca.concat(resultadosExtra).slice(0, cantidad);

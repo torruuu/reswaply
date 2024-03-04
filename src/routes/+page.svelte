@@ -54,7 +54,7 @@ import Preview from '../components/Preview.svelte';
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: 5rem 0;
+        margin: 3rem 0 5rem;
     }
 
     .content {
