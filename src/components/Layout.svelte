@@ -34,7 +34,7 @@ import Results from "./Results.svelte";
     
         <div class="buttons">
             {#if login}
-                <a href="/profile/products">Favoritos</a>
+                <a href="/profile/favorites">Favoritos</a>
                 <a href="/profile/products">Profile</a>
                 <a href="/upload" class="product">Subir producto</a>
             {:else}

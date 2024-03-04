@@ -13,7 +13,7 @@
     }
 </script>
 
-<a href={link} class="container">
+<a href={link} class="link">
     <div class="content">
         <div class="image">
             <img src={img} alt={title}>
@@ -25,23 +25,27 @@
 </a>
 
 <style>
-    .container {
+    .link {
         background-color: #fff;
         width: 17rem;
-        display: inline-block;
+        height: 22rem;
         text-decoration: none;
-        padding: 1.5rem;
+        padding: 0 1.5rem;
         border-radius: 0.6rem;
         box-shadow: 0 0.2rem 0.2rem 0 rgb(205, 205, 205);
+
+        display: inline-block;
     }
 
-    .container:hover {
-        box-shadow: 0 1rem 1rem 0 rgb(205, 205, 205);
+    .link:hover {
+        box-shadow: 0 0.4rem 0.2rem 0.1rem rgb(205, 205, 205);
     }
 
     .content {
+        height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .image {
@@ -65,7 +69,7 @@
         font-weight: 600;
     }
     
-    .container img {
+    img {
         height: 12rem;
     }
 </style>

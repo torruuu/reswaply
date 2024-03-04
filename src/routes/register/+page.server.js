@@ -21,7 +21,6 @@ export const actions = {
                     "name": formUser,
                     "email": formEmail,
                     "password": formPassword,
-                    "balance": 0,
                     "address": null,
                     "card": null,
                     "likes": []

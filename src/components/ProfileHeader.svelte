@@ -6,7 +6,7 @@
       { text: 'Compras', route: '/profile/shopping' },
       { text: 'Ventas', route: '/profile/sales' },
       { text: 'Productos', route: '/profile/products' },
-      { text: 'Cartera', route: '/profile/wallet' },
+      { text: 'Favoritos', route: '/profile/favorites' },
       { text: 'Log out', route: '/profile/logout' },
     ];
   

@@ -152,7 +152,6 @@
       "name": "Alejandro",
       "email": "ale.torrubiano@gmail.com",
       "password": "123456",
-      "balance": 4,
       "address": {
         "province": "Madrid",
         "city": "Majadahonda",
@@ -168,7 +167,9 @@
         "year": "25",
         "cvc": "123"
       },
-      "likes": [],
+      "likes": [
+        4
+      ],
       "id": 1
     },
     {
@@ -185,7 +186,6 @@
       "name": "seller1",
       "email": "seller1@gmail.com",
       "password": "123456",
-      "balance": 0,
       "address": null,
       "card": null,
       "likes": [],
