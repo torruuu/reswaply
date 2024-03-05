@@ -94,7 +94,7 @@
     }
 </script>
 
-<h1>Maps + Svelte</h1>
+<h3>Introduce tu dirección</h3>
 
 <input type="text" bind:this={placeInput} class="finder">
 <div class="map" bind:this={divMap}>
@@ -105,10 +105,11 @@
 
 <style>
     .map {
-        width: 50vw;
-        height: 50vh;
+        margin-top: 1rem;
+        width: 30vw;
+        height: 36vh;
     }
     .finder {
-        width: 50%;
+        width: 100%;
     }
 </style>

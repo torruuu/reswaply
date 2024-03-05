@@ -1,3 +1,5 @@
+import { redirect } from '@sveltejs/kit';
+
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario
@@ -37,7 +39,8 @@ export const actions = {
         });
 
         if (responseUpdate.ok) {
-            return { success: true };
+            cookies.set('update-address', true, { path: '/' });
+            throw redirect(302, '/profile/info');
         }
 
         return {

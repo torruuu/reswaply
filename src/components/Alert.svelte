@@ -55,7 +55,7 @@
         height: 6rem;
         background-color: aqua;
         position: fixed;
-        z-index: 1;
+        z-index: 10;
         top: 6rem;
         left: 50%;
         transform: translate(-50%, -50%);

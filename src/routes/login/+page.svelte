@@ -51,6 +51,7 @@
     }
 
     input[type="submit"] {
+        border: none;
         margin: 0.5rem 0;
         font-size: 1.3rem;
         background-color: #000;
@@ -62,6 +63,10 @@
         font-weight: bold;
         border-radius: 0.5rem;
         cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        opacity: 0.6;
     }
 
     input[type="text"] {
