@@ -1,7 +1,7 @@
 <script>
 	import Map from '../../../components/Map.svelte';
     import { enhance } from '$app/forms';
-    import { goto, afterNavigate } from '$app/navigation';
+    import { afterNavigate } from '$app/navigation';
     import { base } from '$app/paths';
 	import Alert from '../../../components/Alert.svelte';
 
@@ -21,10 +21,7 @@
     })
 
     $: {
-        if (form?.success) {
-            goto(previousPage);
-        }
-        showErrorForm = form?.error
+        showErrorForm = form?.error;
     }
 </script>
 
@@ -72,6 +69,7 @@
                     <br>
                     <input class="field" type="text" name="door" required><br>
                 </label>
+                <input type="hidden" name="previous" value={previousPage}>
                 <input type="submit" value="Actualizar" name="update" class="submit">
             </form>
         </div>

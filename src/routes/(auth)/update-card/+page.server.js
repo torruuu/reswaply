@@ -1,3 +1,5 @@
+import { redirect } from '@sveltejs/kit';
+
 export const actions = {
     default: async ({ request, cookies }) => {
         const data = await request.formData(); // Recogemos los datos del formulario
@@ -7,6 +9,7 @@ export const actions = {
         const month = data.get('month');
         const year = data.get('year');
         const cvc = data.get('code');
+        const previous = data.get('previous');
 
         const userName = cookies.get('user');
 
@@ -35,8 +38,8 @@ export const actions = {
         });
 
         if (responseUpdate.ok) {
-            return {success: true};
-            // throw redirect(302, '/profile/info/payments');
+            cookies.set('update-card', true, { path: '/' });
+            throw redirect(302, previous);
         }
 
         return {

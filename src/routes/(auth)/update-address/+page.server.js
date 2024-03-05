@@ -10,6 +10,7 @@ export const actions = {
         const address = data.get('address');
         const number = data.get('number');
         const door = data.get('door');
+        const previous = data.get('previous');
 
         const userName = cookies.get('user');
 
@@ -21,7 +22,7 @@ export const actions = {
 
         let errorMessage = "Error al actualizar los datos";
 
-        const responseUpdate = await fetch(`http://localhost:4000/users/${userId}`, {
+        const responseUpdate = await fetch(`http://localhost:4000/uusers/${userId}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 "address": {
@@ -40,7 +41,7 @@ export const actions = {
 
         if (responseUpdate.ok) {
             cookies.set('update-address', true, { path: '/' });
-            throw redirect(302, '/profile/info');
+            throw redirect(302, previous);
         }
 
         return {
