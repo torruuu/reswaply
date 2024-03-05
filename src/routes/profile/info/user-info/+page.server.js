@@ -73,10 +73,11 @@ export const actions = {
 
         if (responseUpdate.ok) {
             cookies.set('user', formUser, { path: '/' });
-            return { success: true }
+            cookies.set('update-info', true, { path: '/' });
+            throw redirect(302, '/profile/info');
         }
 
-        errorMessage = "Error al actualizar los datos"
+        errorMessage = "Error al actualizar los datos";
 
         return {
             error: true,

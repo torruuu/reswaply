@@ -2,10 +2,16 @@ export async function load({ cookies }) {
     const user = cookies.get('user');
     let authenticated = false;
     let showUpdateAddress = false;
+    let showUpdateInfo = false;
 
     if (cookies.get('update-address')) {
         showUpdateAddress = true;
         cookies.delete('update-address',{ path: '/' });
+    }
+
+    if (cookies.get('update-info')) {
+        showUpdateInfo = true;
+        cookies.delete('update-info',{ path: '/' });
     }
     
     if (user !== undefined) {

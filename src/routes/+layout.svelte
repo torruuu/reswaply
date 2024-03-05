@@ -15,6 +15,10 @@
     <Alert title={'Éxito'} description={'Dirección actualizada con éxito'} on:close={() => data.showUpdateAddress = false}/>
 {/if}
 
+{#if data.showUpdateInfo}
+    <Alert title={'Éxito'} description={'Datos personales actualizados con éxito'} on:close={() => data.showUpdateInfo = false}/>
+{/if}
+
 {#if $page.route.id !== '/checkout/[postId]' && $page.route.id !== '/login' && $page.route.id !== '/register'}
     <Layout login={data.authenticated} products={data.products} on:search={searchHandler}>
         <slot />
