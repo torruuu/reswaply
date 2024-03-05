@@ -12,12 +12,16 @@
     const title = post.product.name;
     const storage = post.product.storage;
     const price = post.price;
-    const brand = post.product.brand;
+    const color = capitalizeFirstLetter(post.product.color);
     const condition = post.condition;
     const description = post.description;
     const sold = post.sold;
 
     let showOverlay = false;
+
+    function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.substring(1);
+    }
 </script>
 
 {#if showOverlay}
@@ -68,7 +72,7 @@
             </div>
         
             <div class="info">
-                <span>{brand} - {condition}</span>
+                <span>{color} - {condition}</span>
             </div>
         
             <div class="description">

@@ -1,5 +1,6 @@
 <script>
     import Alert from '../../../../components/Alert.svelte';
+    import { enhance } from '$app/forms';
 
     export let data;
     export let form;
@@ -24,7 +25,7 @@
 {/if}
 
 <div class="container">
-    <form method="post">
+    <form method="post" use:enhance>
         <h3>Actualiza tus datos</h3>
         <label>
             Usuario:

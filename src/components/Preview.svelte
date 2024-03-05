@@ -7,6 +7,7 @@
     let storage = post.product.storage;
     let color = capitalizeFirstLetter(post.product.color);
     let price = post.price;
+    let condition = post.condition;
 
     function capitalizeFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.substring(1);
@@ -20,6 +21,7 @@
         </div>
         <span class="title">{title}</span>
         <span class="description">{storage} GB - {color}</span>
+        <span class="condition">{condition}</span>
         <span class="price">{price} €</span>
     </div>
 </a>
@@ -55,13 +57,18 @@
     }
 
     .title {
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 700;
     }
 
     .description {
-        font-size: 1.1rem;
-        padding: 0.3rem 0 0.8rem;
+        font-size: 1rem;
+        padding: 0.3rem 0 0.2rem;
+    }
+
+    .condition {
+        font-size: 1rem;
+        padding-bottom: 0.6rem;
     }
 
     .price {

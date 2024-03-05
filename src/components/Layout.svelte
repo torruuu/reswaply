@@ -35,7 +35,7 @@ import Results from "./Results.svelte";
         <div class="buttons">
             {#if login}
                 <a href="/profile/favorites">Favoritos</a>
-                <a href="/profile/products">Profile</a>
+                <a href="/profile/products">Perfil</a>
                 <a href="/upload" class="product">Subir producto</a>
             {:else}
                 <a href="/login">Log in</a>
@@ -81,7 +81,7 @@ import Results from "./Results.svelte";
 
     .container {
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         display: grid;
         column-gap: 2rem;

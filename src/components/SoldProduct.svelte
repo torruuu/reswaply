@@ -6,7 +6,7 @@
     let link = "/posts/" + postId;
     let img = post.product.img;
     let title = post.product.name;
-    let price = post.price;
+    let price = parseFloat(post.price) + 6.49;
     const seller = post.seller;
     const buyer = post.buyer;
 </script>

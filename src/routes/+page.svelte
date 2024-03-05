@@ -3,9 +3,22 @@
 import Preview from '../components/Preview.svelte';
     export let data;
 
-    const mobiles = data.mobilePosts;
-    const tablets = data.tabletPosts;
-    const consoles = data.consolePosts;
+    const mobiles = obtenerElementosAleatorios(data.mobilePosts, 15);
+    const tablets = obtenerElementosAleatorios(data.tabletPosts, 15);
+    const consoles = obtenerElementosAleatorios(data.consolePosts, 15);
+
+    function obtenerElementosAleatorios(array, cantidad) {
+        // Si el array es más largo que la cantidad deseada, recórtalo
+        if (array.length > cantidad) {
+            array = array.slice(); // Copia el array original para no modificarlo
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1)); // Genera un índice aleatorio
+                [array[i], array[j]] = [array[j], array[i]]; // Intercambia elementos aleatoriamente
+            }
+            array = array.slice(0, cantidad); // Recorta el array a la cantidad deseada
+        }
+        return array; // Devuelve el array con elementos aleatorios
+    }
 
 </script>
 
@@ -17,12 +30,6 @@ import Preview from '../components/Preview.svelte';
         <div class="mobiles">
             <h2>Smartphones</h2>
             <div class="posts-content">
-                {#each mobiles as post}
-                    <Preview {post} />
-                {/each}
-                {#each mobiles as post}
-                    <Preview {post} />
-                {/each}
                 {#each mobiles as post}
                     <Preview {post} />
                 {/each}
@@ -54,14 +61,14 @@ import Preview from '../components/Preview.svelte';
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: 3rem 0 5rem;
+        margin: 3rem 0 8rem;
     }
 
     .content {
         width: 70%;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 6rem;
     }
 
     .posts-content {

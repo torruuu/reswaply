@@ -19,24 +19,6 @@
       "id": 1
     },
     {
-      "seller": "Alejandro",
-      "product": {
-        "name": "Galaxy Tab A8",
-        "brand": "Samsung",
-        "category": "tablets",
-        "color": "gris",
-        "storage": 32,
-        "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
-        "id": 3
-      },
-      "condition": "Poco usado",
-      "description": "Portátil asus en buen estado",
-      "price": "800",
-      "sold": false,
-      "buyer": null,
-      "id": 2
-    },
-    {
       "seller": "torru",
       "product": {
         "name": "Playstation 4 Slim",
@@ -89,6 +71,1500 @@
       "sold": false,
       "buyer": null,
       "id": 5
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "medianoche",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 6
+      },
+      "condition": "Nuevo",
+      "description": "Esta como nuevo. Sin ningún golpe",
+      "price": "600",
+      "sold": true,
+      "buyer": "Alejandro",
+      "id": 6
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "blanco",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-white.png",
+        "id": 45
+      },
+      "condition": "Nuevo",
+      "description": "Esta como nuevo. Sin ningún rasguño",
+      "price": "455",
+      "sold": false,
+      "buyer": null,
+      "id": 7
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "plata",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+        "id": 36
+      },
+      "condition": "Como nuevo",
+      "description": "Esta como nuevo. En perfectas condiciones",
+      "price": "476",
+      "sold": false,
+      "buyer": null,
+      "id": 8
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "negro",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-black.png",
+        "id": 41
+      },
+      "condition": "Como nuevo",
+      "description": "Esta en perfectas condiciones",
+      "price": "452",
+      "sold": false,
+      "buyer": null,
+      "id": 9
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "negro",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-black.png",
+        "id": 42
+      },
+      "condition": "Como nuevo",
+      "description": "Esta como nuevo. Sin desperfectos",
+      "price": "473",
+      "sold": false,
+      "buyer": null,
+      "id": 10
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "gris",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-gray.png",
+        "id": 43
+      },
+      "condition": "Nuevo",
+      "description": "No cuenta con ningún desperfecto. Muy cuidado",
+      "price": "469",
+      "sold": false,
+      "buyer": null,
+      "id": 11
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "gris",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-gray.png",
+        "id": 44
+      },
+      "condition": "Nuevo",
+      "description": "En perfectas condiciones",
+      "price": "524",
+      "sold": false,
+      "buyer": null,
+      "id": 12
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S22",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "blanco",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s22-white.png",
+        "id": 46
+      },
+      "condition": "Sin abrir",
+      "description": "Sin abrir. Aún conserva el precinto",
+      "price": "493",
+      "sold": false,
+      "buyer": null,
+      "id": 13
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "beige",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
+        "id": 4
+      },
+      "condition": "Nuevo",
+      "description": "Esta en perfectas condiciones",
+      "price": "692",
+      "sold": false,
+      "buyer": null,
+      "id": 14
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "beige",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
+        "id": 38
+      },
+      "condition": "Nuevo",
+      "description": "En perfectas condiciones. Sin ningún desperfecto",
+      "price": "839",
+      "sold": false,
+      "buyer": null,
+      "id": 15
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "púrpura",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-purple.png",
+        "id": 39
+      },
+      "condition": "Nuevo",
+      "description": "Está como nuevo, en perfectas condiciones",
+      "price": "665",
+      "sold": false,
+      "buyer": null,
+      "id": 16
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "púrpura",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-purple.png",
+        "id": 40
+      },
+      "condition": "Nuevo",
+      "description": "En un estado inmejorable",
+      "price": "809",
+      "sold": false,
+      "buyer": null,
+      "id": 17
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "negro",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+        "id": 47
+      },
+      "condition": "Como nuevo",
+      "description": "Está como el primer día",
+      "price": "849",
+      "sold": false,
+      "buyer": null,
+      "id": 18
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "negro",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+        "id": 48
+      },
+      "condition": "Nuevo",
+      "description": "El teléfono se encuentra en perfectas condiciones",
+      "price": "889",
+      "sold": false,
+      "buyer": null,
+      "id": 19
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "negro",
+        "storage": 1000,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+        "id": 49
+      },
+      "condition": "Nuevo",
+      "description": "En muy buen estado. El almacenamiento es una pasada",
+      "price": "1089",
+      "sold": false,
+      "buyer": null,
+      "id": 20
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "beige",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-beige.png",
+        "id": 50
+      },
+      "condition": "Nuevo",
+      "description": "Se encuentra como el primer día",
+      "price": "869",
+      "sold": false,
+      "buyer": null,
+      "id": 21
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "beige",
+        "storage": 1000,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-beige.png",
+        "id": 52
+      },
+      "condition": "Nuevo",
+      "description": "El teléfono está como el primer día",
+      "price": "1119",
+      "sold": false,
+      "buyer": null,
+      "id": 22
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "púrpura",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+        "id": 53
+      },
+      "condition": "Nuevo",
+      "description": "Esta en perfectas condiciones",
+      "price": "944",
+      "sold": false,
+      "buyer": null,
+      "id": 23
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "púrpura",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+        "id": 54
+      },
+      "condition": "Nuevo",
+      "description": "Esta como el primer día",
+      "price": "977",
+      "sold": false,
+      "buyer": null,
+      "id": 24
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "category": "mobiles",
+        "color": "púrpura",
+        "storage": 1000,
+        "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+        "id": 55
+      },
+      "condition": "Como nuevo",
+      "description": "A destacar su gran almacenamiento. Esta en perfectas condiciones",
+      "price": "1087",
+      "sold": false,
+      "buyer": null,
+      "id": 25
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "plata",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+        "id": 35
+      },
+      "condition": "Como nuevo",
+      "description": "Está como nuevo",
+      "price": "440",
+      "sold": false,
+      "buyer": null,
+      "id": 26
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "plata",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+        "id": 37
+      },
+      "condition": "Nuevo",
+      "description": "En perfectas condiciones",
+      "price": "559",
+      "sold": false,
+      "buyer": null,
+      "id": 27
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul pacífico",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+        "id": 26
+      },
+      "condition": "Nuevo",
+      "description": "El producto está en muy buenas condiciones",
+      "price": "459",
+      "sold": false,
+      "buyer": null,
+      "id": 28
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul pacífico",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+        "id": 27
+      },
+      "condition": "Nuevo",
+      "description": "En perfectas condiciones",
+      "price": "489",
+      "sold": false,
+      "buyer": null,
+      "id": 29
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul pacífico",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+        "id": 28
+      },
+      "condition": "Nuevo",
+      "description": "Está en perfectas condiciones",
+      "price": "547",
+      "sold": false,
+      "buyer": null,
+      "id": 30
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "grafito",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+        "id": 29
+      },
+      "condition": "Nuevo",
+      "description": "Está en perfectas condiciones",
+      "price": "457",
+      "sold": false,
+      "buyer": null,
+      "id": 31
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "grafito",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+        "id": 30
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "488",
+      "sold": false,
+      "buyer": null,
+      "id": 32
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "grafito",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+        "id": 31
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "563",
+      "sold": false,
+      "buyer": null,
+      "id": 33
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "oro",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+        "id": 32
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "419",
+      "sold": false,
+      "buyer": null,
+      "id": 34
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "oro",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+        "id": 33
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "464",
+      "sold": false,
+      "buyer": null,
+      "id": 35
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 12 Pro",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "oro",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+        "id": 34
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "538",
+      "sold": false,
+      "buyer": null,
+      "id": 36
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "medianoche",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 5
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "448",
+      "sold": false,
+      "buyer": null,
+      "id": 37
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "medianoche",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 6
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "539",
+      "sold": false,
+      "buyer": null,
+      "id": 38
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "medianoche",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+        "id": 7
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "678",
+      "sold": false,
+      "buyer": null,
+      "id": 39
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rojo",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+        "id": 8
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "454",
+      "sold": false,
+      "buyer": null,
+      "id": 40
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rojo",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+        "id": 9
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "517",
+      "sold": false,
+      "buyer": null,
+      "id": 41
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rojo",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+        "id": 10
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "648",
+      "sold": false,
+      "buyer": null,
+      "id": 42
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+        "id": 11
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "447",
+      "sold": false,
+      "buyer": null,
+      "id": 43
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+        "id": 12
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "493",
+      "sold": false,
+      "buyer": null,
+      "id": 44
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "azul",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+        "id": 13
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "653",
+      "sold": false,
+      "buyer": null,
+      "id": 45
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "verde",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+        "id": 14
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "456",
+      "sold": false,
+      "buyer": null,
+      "id": 46
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "verde",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+        "id": 15
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "537",
+      "sold": false,
+      "buyer": null,
+      "id": 47
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "verde",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+        "id": 16
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "689",
+      "sold": false,
+      "buyer": null,
+      "id": 48
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "blanco estrella",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+        "id": 17
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "488",
+      "sold": false,
+      "buyer": null,
+      "id": 49
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "blanco estrella",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+        "id": 18
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "535",
+      "sold": false,
+      "buyer": null,
+      "id": 50
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "blanco estrella",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+        "id": 19
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "655",
+      "sold": false,
+      "buyer": null,
+      "id": 51
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rosa",
+        "storage": 128,
+        "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+        "id": 20
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "457",
+      "sold": false,
+      "buyer": null,
+      "id": 52
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rosa",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+        "id": 21
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "518",
+      "sold": false,
+      "buyer": null,
+      "id": 53
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone 13",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "rosa",
+        "storage": 512,
+        "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+        "id": 22
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "636",
+      "sold": false,
+      "buyer": null,
+      "id": 54
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone X",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "plata",
+        "storage": 64,
+        "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
+        "id": 1
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "203",
+      "sold": false,
+      "buyer": null,
+      "id": 55
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone X",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "plata",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
+        "id": 23
+      },
+      "condition": "Correcto",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "232",
+      "sold": false,
+      "buyer": null,
+      "id": 56
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone X",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "gris espacial",
+        "storage": 64,
+        "img": "http://localhost:4000/mobiles/iphone-x-space-gray.png",
+        "id": 24
+      },
+      "condition": "Correcto",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "179",
+      "sold": false,
+      "buyer": null,
+      "id": 57
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Iphone X",
+        "brand": "Apple",
+        "category": "mobiles",
+        "color": "gris espacial",
+        "storage": 256,
+        "img": "http://localhost:4000/mobiles/iphone-x-space-gray.png",
+        "id": 25
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "248",
+      "sold": false,
+      "buyer": null,
+      "id": 58
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "gris",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+        "id": 3
+      },
+      "condition": "Nuevo",
+      "description": "En perfecto estado",
+      "price": "218",
+      "sold": false,
+      "buyer": null,
+      "id": 59
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "gris",
+        "storage": 64,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+        "id": 56
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "242",
+      "sold": false,
+      "buyer": null,
+      "id": 60
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "gris",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+        "id": 57
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "267",
+      "sold": false,
+      "buyer": null,
+      "id": 61
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+        "id": 58
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "229",
+      "sold": false,
+      "buyer": null,
+      "id": 62
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 64,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+        "id": 59
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "253",
+      "sold": false,
+      "buyer": null,
+      "id": 63
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab A8",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+        "id": 60
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "268",
+      "sold": false,
+      "buyer": null,
+      "id": 64
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "negro",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-black.png",
+        "id": 61
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "459",
+      "sold": false,
+      "buyer": null,
+      "id": 65
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "negro",
+        "storage": 256,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-black.png",
+        "id": 62
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "487",
+      "sold": false,
+      "buyer": null,
+      "id": 66
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "bronce",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-bronze.png",
+        "id": 63
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "474",
+      "sold": false,
+      "buyer": null,
+      "id": 67
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "bronce",
+        "storage": 256,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-bronze.png",
+        "id": 64
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "509",
+      "sold": false,
+      "buyer": null,
+      "id": 68
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-silver.png",
+        "id": 65
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "466",
+      "sold": false,
+      "buyer": null,
+      "id": 69
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 256,
+        "img": "http://localhost:4000/tablets/galaxy-tab-s7-silver.png",
+        "id": 66
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "489",
+      "sold": false,
+      "buyer": null,
+      "id": 70
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "gris espacial",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-space-gray.png",
+        "id": 71
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "303",
+      "sold": false,
+      "buyer": null,
+      "id": 71
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "gris espacial",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-space-gray.png",
+        "id": 72
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "360",
+      "sold": false,
+      "buyer": null,
+      "id": 72
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-silver.png",
+        "id": 73
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "333",
+      "sold": false,
+      "buyer": null,
+      "id": 73
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-silver.png",
+        "id": 74
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "419",
+      "sold": false,
+      "buyer": null,
+      "id": 74
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "oro",
+        "storage": 32,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-gold.png",
+        "id": 75
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "309",
+      "sold": false,
+      "buyer": null,
+      "id": 75
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2020)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "oro",
+        "storage": 128,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2020-gold.png",
+        "id": 76
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "432",
+      "sold": false,
+      "buyer": null,
+      "id": 76
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2021)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "gris espacial",
+        "storage": 64,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2021-space-gray.png",
+        "id": 67
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "345",
+      "sold": false,
+      "buyer": null,
+      "id": 77
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2021)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "gris espacial",
+        "storage": 256,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2021-space-gray.png",
+        "id": 68
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "487",
+      "sold": false,
+      "buyer": null,
+      "id": 78
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2021)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 64,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2021-silver.png",
+        "id": 69
+      },
+      "condition": "Correcto",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "329",
+      "sold": false,
+      "buyer": null,
+      "id": 79
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Playstation 4 Slim",
+        "brand": "Sony",
+        "category": "consoles",
+        "color": "negro",
+        "storage": 1000,
+        "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
+        "id": 77
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "260",
+      "sold": false,
+      "buyer": null,
+      "id": 81
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "iPad 10.2 (2021)",
+        "brand": "Apple",
+        "category": "tablets",
+        "color": "plata",
+        "storage": 256,
+        "img": "http://localhost:4000/tablets/ipad-10.2-2021-silver.png",
+        "id": 70
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "497",
+      "sold": false,
+      "buyer": null,
+      "id": 82
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Playstation 4 Slim",
+        "brand": "Sony",
+        "category": "consoles",
+        "color": "blanco",
+        "storage": 500,
+        "img": "http://localhost:4000/consoles/playstation-4-slim-white.png",
+        "id": 78
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "239",
+      "sold": false,
+      "buyer": null,
+      "id": 83
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Playstation 4 Slim",
+        "brand": "Sony",
+        "category": "consoles",
+        "color": "blanco",
+        "storage": 1000,
+        "img": "http://localhost:4000/consoles/playstation-4-slim-white.png",
+        "id": 79
+      },
+      "condition": "Correcto",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "285",
+      "sold": false,
+      "buyer": null,
+      "id": 84
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Playstation 5",
+        "brand": "Sony",
+        "category": "consoles",
+        "color": "blanco",
+        "storage": 825,
+        "img": "http://localhost:4000/consoles/playstation-5-white.png",
+        "id": 80
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "519",
+      "sold": false,
+      "buyer": null,
+      "id": 85
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Xbox One X",
+        "brand": "Microsoft",
+        "category": "consoles",
+        "color": "negro",
+        "storage": 1000,
+        "img": "http://localhost:4000/consoles/xbox-one-x-black.png",
+        "id": 81
+      },
+      "condition": "Como nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "215",
+      "sold": false,
+      "buyer": null,
+      "id": 86
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Xbox One X",
+        "brand": "Microsoft",
+        "category": "consoles",
+        "color": "blanco",
+        "storage": 1000,
+        "img": "http://localhost:4000/consoles/xbox-one-x-white.png",
+        "id": 82
+      },
+      "condition": "Correcto",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "242",
+      "sold": false,
+      "buyer": null,
+      "id": 87
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Xbox Series X",
+        "brand": "Microsoft",
+        "category": "consoles",
+        "color": "negro",
+        "storage": 1000,
+        "img": "http://localhost:4000/consoles/xbox-series-x-black.png",
+        "id": 84
+      },
+      "condition": "Sin abrir",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "489",
+      "sold": false,
+      "buyer": null,
+      "id": 88
+    },
+    {
+      "seller": "seller1",
+      "product": {
+        "name": "Xbox Series S",
+        "brand": "Microsoft",
+        "category": "consoles",
+        "color": "blanco",
+        "storage": 512,
+        "img": "http://localhost:4000/consoles/xbox-series-s-white.png",
+        "id": 83
+      },
+      "condition": "Nuevo",
+      "description": "El producto se encuentra en perfectas condiciones. No presenta ningún desperfecto",
+      "price": "295",
+      "sold": false,
+      "buyer": null,
+      "id": 89
     }
   ],
   "products": [
@@ -123,8 +1599,8 @@
       "name": "Galaxy S23",
       "brand": "Samsung",
       "category": "mobiles",
-      "color": "blanco",
-      "storage": 64,
+      "color": "beige",
+      "storage": 128,
       "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
       "id": 4
     },
@@ -145,6 +1621,708 @@
       "storage": 256,
       "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
       "id": 6
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "medianoche",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-midnight.png",
+      "id": 7
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rojo",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+      "id": 8
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rojo",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+      "id": 9
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rojo",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-red.png",
+      "id": 10
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+      "id": 11
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+      "id": 12
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-blue.png",
+      "id": 13
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "verde",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+      "id": 14
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "verde",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+      "id": 15
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "verde",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-green.png",
+      "id": 16
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "blanco estrella",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+      "id": 17
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "blanco estrella",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+      "id": 18
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "blanco estrella",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-starlight.png",
+      "id": 19
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rosa",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+      "id": 20
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rosa",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+      "id": 21
+    },
+    {
+      "name": "Iphone 13",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "rosa",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-13-pink.png",
+      "id": 22
+    },
+    {
+      "name": "Iphone X",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "plata",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-x-silver.png",
+      "id": 23
+    },
+    {
+      "name": "Iphone X",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "gris espacial",
+      "storage": 64,
+      "img": "http://localhost:4000/mobiles/iphone-x-space-gray.png",
+      "id": 24
+    },
+    {
+      "name": "Iphone X",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "gris espacial",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-x-space-gray.png",
+      "id": 25
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul pacífico",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+      "id": 26
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul pacífico",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+      "id": 27
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "azul pacífico",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-pacific-blue.png",
+      "id": 28
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "grafito",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+      "id": 29
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "grafito",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+      "id": 30
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "grafito",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-graphite.png",
+      "id": 31
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "oro",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+      "id": 32
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "oro",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+      "id": 33
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "oro",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-gold.png",
+      "id": 34
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "plata",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+      "id": 35
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "plata",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+      "id": 36
+    },
+    {
+      "name": "Iphone 12 Pro",
+      "brand": "Apple",
+      "category": "mobiles",
+      "color": "plata",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/iphone-12-pro-silver.png",
+      "id": 37
+    },
+    {
+      "name": "Galaxy S23",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "beige",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-white.png",
+      "id": 38
+    },
+    {
+      "name": "Galaxy S23",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "púrpura",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-purple.png",
+      "id": 39
+    },
+    {
+      "name": "Galaxy S23",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "púrpura",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-purple.png",
+      "id": 40
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "negro",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-black.png",
+      "id": 41
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "negro",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-black.png",
+      "id": 42
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "gris",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-gray.png",
+      "id": 43
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "gris",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-gray.png",
+      "id": 44
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "blanco",
+      "storage": 128,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-white.png",
+      "id": 45
+    },
+    {
+      "name": "Galaxy S22",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "blanco",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s22-white.png",
+      "id": 46
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "negro",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+      "id": 47
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "negro",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+      "id": 48
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "negro",
+      "storage": 1000,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-black.png",
+      "id": 49
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "beige",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-beige.png",
+      "id": 50
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "beige",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-beige.png",
+      "id": 51
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "beige",
+      "storage": 1000,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-beige.png",
+      "id": 52
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "púrpura",
+      "storage": 256,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+      "id": 53
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "púrpura",
+      "storage": 512,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+      "id": 54
+    },
+    {
+      "name": "Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "category": "mobiles",
+      "color": "púrpura",
+      "storage": 1000,
+      "img": "http://localhost:4000/mobiles/galaxy-s23-ultra-purple.png",
+      "id": 55
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "gris",
+      "storage": 64,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+      "id": 56
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "gris",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-grey.png",
+      "id": 57
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 32,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+      "id": 58
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 64,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+      "id": 59
+    },
+    {
+      "name": "Galaxy Tab A8",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/galaxy-tab-a8-silver.png",
+      "id": 60
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "negro",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-black.png",
+      "id": 61
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "negro",
+      "storage": 256,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-black.png",
+      "id": 62
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "bronce",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-bronze.png",
+      "id": 63
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "bronce",
+      "storage": 256,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-bronze.png",
+      "id": 64
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-silver.png",
+      "id": 65
+    },
+    {
+      "name": "Galaxy Tab S7",
+      "brand": "Samsung",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 256,
+      "img": "http://localhost:4000/tablets/galaxy-tab-s7-silver.png",
+      "id": 66
+    },
+    {
+      "name": "iPad 10.2 (2021)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "gris espacial",
+      "storage": 64,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2021-space-gray.png",
+      "id": 67
+    },
+    {
+      "name": "iPad 10.2 (2021)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "gris espacial",
+      "storage": 256,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2021-space-gray.png",
+      "id": 68
+    },
+    {
+      "name": "iPad 10.2 (2021)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 64,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2021-silver.png",
+      "id": 69
+    },
+    {
+      "name": "iPad 10.2 (2021)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 256,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2021-silver.png",
+      "id": 70
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "gris espacial",
+      "storage": 32,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-space-gray.png",
+      "id": 71
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "gris espacial",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-space-gray.png",
+      "id": 72
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 32,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-silver.png",
+      "id": 73
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "plata",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-silver.png",
+      "id": 74
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "oro",
+      "storage": 32,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-gold.png",
+      "id": 75
+    },
+    {
+      "name": "iPad 10.2 (2020)",
+      "brand": "Apple",
+      "category": "tablets",
+      "color": "oro",
+      "storage": 128,
+      "img": "http://localhost:4000/tablets/ipad-10.2-2020-gold.png",
+      "id": 76
+    },
+    {
+      "name": "Playstation 4 Slim",
+      "brand": "Sony",
+      "category": "consoles",
+      "color": "negro",
+      "storage": 1000,
+      "img": "http://localhost:4000/consoles/playstation-4-slim-black.png",
+      "id": 77
+    },
+    {
+      "name": "Playstation 4 Slim",
+      "brand": "Sony",
+      "category": "consoles",
+      "color": "blanco",
+      "storage": 500,
+      "img": "http://localhost:4000/consoles/playstation-4-slim-white.png",
+      "id": 78
+    },
+    {
+      "name": "Playstation 4 Slim",
+      "brand": "Sony",
+      "category": "consoles",
+      "color": "blanco",
+      "storage": 1000,
+      "img": "http://localhost:4000/consoles/playstation-4-slim-white.png",
+      "id": 79
+    },
+    {
+      "name": "Playstation 5",
+      "brand": "Sony",
+      "category": "consoles",
+      "color": "blanco",
+      "storage": 825,
+      "img": "http://localhost:4000/consoles/playstation-5-white.png",
+      "id": 80
+    },
+    {
+      "name": "Xbox One X",
+      "brand": "Microsoft",
+      "category": "consoles",
+      "color": "negro",
+      "storage": 1000,
+      "img": "http://localhost:4000/consoles/xbox-one-x-black.png",
+      "id": 81
+    },
+    {
+      "name": "Xbox One X",
+      "brand": "Microsoft",
+      "category": "consoles",
+      "color": "blanco",
+      "storage": 1000,
+      "img": "http://localhost:4000/consoles/xbox-one-x-white.png",
+      "id": 82
+    },
+    {
+      "name": "Xbox Series S",
+      "brand": "Microsoft",
+      "category": "consoles",
+      "color": "blanco",
+      "storage": 512,
+      "img": "http://localhost:4000/consoles/xbox-series-s-white.png",
+      "id": 83
+    },
+    {
+      "name": "Xbox Series X",
+      "brand": "Microsoft",
+      "category": "consoles",
+      "color": "negro",
+      "storage": 1000,
+      "img": "http://localhost:4000/consoles/xbox-series-x-black.png",
+      "id": 84
     }
   ],
   "users": [

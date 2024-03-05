@@ -62,7 +62,7 @@
         height: 10rem;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-columns: 3fr 9fr 1fr;
         grid-template-rows: repeat(4, 1fr);
         column-gap: 2rem;
 
@@ -75,6 +75,7 @@
 
     .image {
         grid-row: 1 / -1;
+        border-right: 0.1rem solid rgb(205, 205, 205);
     }
 
     img {

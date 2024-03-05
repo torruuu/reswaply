@@ -22,7 +22,7 @@ export const actions = {
 
         let errorMessage = "Error al actualizar los datos";
 
-        const responseUpdate = await fetch(`http://localhost:4000/uusers/${userId}`, {
+        const responseUpdate = await fetch(`http://localhost:4000/users/${userId}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 "address": {

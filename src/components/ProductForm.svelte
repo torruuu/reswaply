@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+  import { enhance } from '$app/forms';
 	import Select from './Select.svelte';
 
   onMount(() => {
@@ -51,9 +52,15 @@
 
   function searchProduct(e) {
     let inputValue = e.detail.value;
-    products = orderArrayByRegex(products.map(item => item.name), inputValue)
-      .map(name => {
-      return products.find(item => item.name === name);
+
+    const regex = new RegExp(inputValue, 'i');
+
+    // Filtrar los productos cuyo nombre coincida con la expresión regular
+    products = data.products;
+    products = products.filter(product => product.brand === brandSelected && product.category === categorySelected);
+    products.forEach(product => uniqueBrands.add(product.brand));
+    products = products.filter(product => {
+        return regex.test(product.name);
     });
   }
 
@@ -93,13 +100,13 @@
   }
 
   function capitalizeFirstLetter(str) {
-        return str.charAt(0).toUpperCase() + str.substring(1);
-    }
+    return str.charAt(0).toUpperCase() + str.substring(1);
+  }
 </script>
 
 <div class="main-container">
 
-  <form method="post" action={action}>
+  <form method="post" action={action} use:enhance>
     <div class="form-content">
       <h2>{!editable ? 'Edita tu producto' : 'Sube tu producto'}</h2>
 
@@ -152,31 +159,35 @@
             <Select products={true} placeholder={'Ej: Iphone'} enabled={brandSelected !== undefined && editable} bind:selectedValue={productSelected} on:search={searchProduct} on:exit={() => {
               products = data.products;
               products = products
-                .filter(product => product.brand === brandSelected);
+                .filter(product => product.brand === brandSelected && product.category === categorySelected);
             }}
             on:mount={() => {
               if (post) {
                 productSelected = post.product.name + ' - ' + post.product.storage + ' GB - ' + capitalizeFirstLetter(post.product.color);
               }
             }}>
-              {#each products as value}
-                <button class="product-value" on:mousedown={(e) => {
-                  if (e.button === 0) {
-                    productSelected = value.name + ' - ' + value.storage + ' GB - ' + capitalizeFirstLetter(value.color);
-                    productIdSelected = value.id;
-                  }
-                }}>
-                <div class="product-description">
-                  <div class="image">
-                    <img src={value.img} alt={value.name}>
+              {#if products.length > 0}
+                {#each products as value}
+                  <button class="product-value" on:mousedown={(e) => {
+                    if (e.button === 0) {
+                      productSelected = value.name + ' - ' + value.storage + ' GB - ' + capitalizeFirstLetter(value.color);
+                      productIdSelected = value.id;
+                    }
+                  }}>
+                  <div class="product-description">
+                    <div class="image">
+                      <img src={value.img} alt={value.name}>
+                    </div>
+                    <div class="description">
+                      <h5>{value.name}</h5>
+                      <span>{value.storage} GB - {capitalizeFirstLetter(value.color)}</span>
+                    </div>
                   </div>
-                  <div class="description">
-                    <h5>{value.name}</h5>
-                    <span>{value.storage} GB - {capitalizeFirstLetter(value.color)}</span>
-                  </div>
-                </div>
-                </button>
-              {/each}
+                  </button>
+                {/each}
+              {:else}
+                  <div class="no-results">Sin resultados</div>
+              {/if}
             </Select>
           {/key}
       </div>
@@ -201,7 +212,7 @@
                 if (e.button === 0) {
                   conditionSelected = state;
                 }
-              }}>{state} {description}</button>
+              }}><span class="state">{state}</span> {description}</button>
             {/each}
           </Select>
         {/key}
@@ -331,6 +342,12 @@
     border-top: 0.1rem solid rgb(205, 205, 205);
   }
 
+  .no-results {
+    width: 100%;
+    border-top: 0.1rem solid rgb(205, 205, 205);
+    padding: 0.5rem 0.3rem;
+  }
+
   .value {
     height: 50px;
     text-align: left;
@@ -347,6 +364,11 @@
     display: grid;
     grid-template-columns: 1.5fr 9fr;
     column-gap: 0.2rem;
+  }
+
+  .state {
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
   .image img {

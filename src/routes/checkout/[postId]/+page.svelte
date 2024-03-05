@@ -1,7 +1,11 @@
 <script>
+	import Alert from "../../../components/Alert.svelte";
+
     export let data;
+    export let form;
 
     const post = data.post;
+    let showErrorForm = form?.error;
     const shippingPrice = 6.49.toLocaleString('es-ES', { minimumFractionDigits: 2 });
 
     const productImg = post.product.img;
@@ -15,7 +19,6 @@
     const cardNumber = data.cardNumber;
     const cardholder = data.cardholder;
     let buttonDisabled = true;
-    let showSuccess = true;
 
     $: {
         if (address && cardNumber) {
@@ -23,12 +26,17 @@
         } else {
             buttonDisabled = true;
         }
+        showErrorForm = form?.error;
     }
 
     function capitalizeFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.substring(1);
     }
 </script>
+
+{#if showErrorForm}
+    <Alert type={'error'} title={'Error'} description={form.message} on:close={() => showErrorForm = false}/>
+{/if}
 
 <div class="container">
     <div class="purchase-content">
@@ -128,7 +136,9 @@
                 <h3>{total} €</h3>
             </div>
 
-            <button class="submit" type="submit" disabled={buttonDisabled}>Hacer el pedido</button>
+            <form method="post">
+                <button class="submit" type="submit" disabled={buttonDisabled}>Hacer el pedido</button>
+            </form>
 
         </div>
     </div>
@@ -268,7 +278,12 @@
         font-weight: 500;
     }
 
+    form {
+        width: 100%;
+    }
+
     .submit {
+        width: 100%;
         height: 50px;
         border-radius: 2rem;
         border: none;

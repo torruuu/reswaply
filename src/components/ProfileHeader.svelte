@@ -10,7 +10,7 @@
     { text: 'Ventas', route: '/profile/sales' },
     { text: 'Productos', route: '/profile/products' },
     { text: 'Favoritos', route: '/profile/favorites' },
-    { text: 'Log out' },
+    { text: 'Cerrar sesión' },
   ];
 
   // Define una función para verificar si la ruta actual coincide con una determinada sección
@@ -24,7 +24,7 @@
 <nav>
   <div class="container">
     {#each sections as section}
-      {#if section.text === 'Log out'}
+      {#if section.text === 'Cerrar sesión'}
         <div class="logout">
           <button on:click={handleLogout}>{section.text}</button>
         </div>

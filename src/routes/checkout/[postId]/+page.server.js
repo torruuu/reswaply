@@ -39,3 +39,32 @@ export async function load({ params, cookies }) {
 
     return { post, cardNumber, cardholder, address }
 }
+
+export const actions = {
+    default: async ({ params, cookies }) => {
+        const postId = params.postId;
+        const userName = cookies.get('user');
+
+        const responseBuy = await fetch(`http://localhost:4000/posts/${postId}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                "sold": true,
+                "buyer": userName
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (responseBuy.ok) {
+            cookies.set('purchased-product', true, { path: '/' });
+            throw redirect(302, '/success');
+        }
+
+        return {
+            error: true,
+            message: 'Error al comprar el producto'
+        }
+        
+    }
+};

@@ -5,16 +5,27 @@
 
     $: {
         postsSearched = data.postsSearched;
-        similarPosts = data.similarPosts;
+        similarPosts = obtenerElementosAleatorios(data.similarPosts, 15);
         productSearched = data.product;
         numberResults = postsSearched.length;
     }
     let postsSearched = data.postsSearched;
-    let similarPosts = data.similarPosts;
+    let similarPosts = obtenerElementosAleatorios(data.similarPosts, 15);
     let productSearched = data.product;
     let numberResults = postsSearched.length;
 
-    console.log(similarPosts);
+    function obtenerElementosAleatorios(array, cantidad) {
+        // Si el array es más largo que la cantidad deseada, recórtalo
+        if (array.length > cantidad) {
+            array = array.slice(); // Copia el array original para no modificarlo
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1)); // Genera un índice aleatorio
+                [array[i], array[j]] = [array[j], array[i]]; // Intercambia elementos aleatoriamente
+            }
+            array = array.slice(0, cantidad); // Recorta el array a la cantidad deseada
+        }
+        return array; // Devuelve el array con elementos aleatorios
+    }
 </script>
 
 {#key postsSearched}
@@ -23,24 +34,6 @@
     {#if numberResults > 0}
         <h3 class="results">{numberResults} {numberResults > 1 ? 'productos' : 'producto'}</h3>
         <div class="posts">
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
             {#each postsSearched as post}
                 <Preview {post} />
             {/each}
@@ -63,22 +56,6 @@
             {#each similarPosts as post}
                 <Preview {post} />
             {/each}
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
-
         </div>
     </div>
 </div>
@@ -112,7 +89,7 @@
     }
 
     .similar-container {
-        margin-top: 6rem;
+        margin-top: 10rem;
     }
 
     .similar-content {

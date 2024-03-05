@@ -16,21 +16,6 @@
             {#each likedPosts as post}
                 <Preview {post} />
             {/each}
-            {#each likedPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each likedPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each likedPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each likedPosts as post}
-                <Preview {post} />
-            {/each}
-            {#each likedPosts as post}
-                <Preview {post} />
-            {/each}
         </div>
     {:else}
         <NoFound title={'Nada por aquí... todavía'} description={'Guarda aquí tus favoritos para estar al día'} buttonValue={'Elige tus favoritos'} redirect={'/'} />
