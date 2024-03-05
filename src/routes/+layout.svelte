@@ -10,7 +10,7 @@
     }
 </script>
 
-{#if $page.route.id !== '/checkout/[postId]'}
+{#if $page.route.id !== '/checkout/[postId]' && $page.route.id !== '/login' && $page.route.id !== '/register'}
     <Layout login={data.authenticated} products={data.products} on:search={searchHandler}>
         <slot />
     </Layout>

@@ -39,7 +39,7 @@ import Results from "./Results.svelte";
                 <a href="/upload" class="product">Subir producto</a>
             {:else}
                 <a href="/login">Log in</a>
-                <a href="/register">Register</a>
+                <a href="/register">Registrar</a>
             {/if}
         </div>
     

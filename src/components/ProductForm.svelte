@@ -156,7 +156,7 @@
             }}
             on:mount={() => {
               if (post) {
-                productSelected = post.product.name;
+                productSelected = post.product.name + ' - ' + post.product.storage + ' GB - ' + capitalizeFirstLetter(post.product.color);
               }
             }}>
               {#each products as value}
