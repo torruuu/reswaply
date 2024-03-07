@@ -8,7 +8,7 @@ export async function load({ params, cookies, parent }) {
     const post = await response.json();
 
     if (post.seller !== user) {
-        throw redirect(303, '/');
+        throw redirect(303, '/posts/' + postId);
     }
 
     const { products, conditions } = await parent();

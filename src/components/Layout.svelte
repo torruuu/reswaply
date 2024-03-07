@@ -1,6 +1,6 @@
 <script>
     import Footer from "./Footer.svelte";
-import Results from "./Results.svelte";
+    import Results from "./Results.svelte";
     import { createEventDispatcher } from "svelte";
 
     let dispatch = createEventDispatcher();
@@ -81,7 +81,7 @@ import Results from "./Results.svelte";
 
     .container {
         position: fixed;
-        z-index: 2;
+        z-index: 4;
         top: 0;
         display: grid;
         column-gap: 2rem;

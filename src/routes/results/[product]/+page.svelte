@@ -1,18 +1,63 @@
 <script>
+    import Filter from '../../../components/Filter.svelte';
     import Preview from '../../../components/Preview.svelte';
+	import PriceRange from '../../../components/PriceRange.svelte';
 
     export let data;
+
+    let postsSearched;
+    let similarPosts;
+    let productSearched;
+    let numberResults;
+
+    let allStorages;
+    let allColors;
+    let allConditions;
+
+    let filteredStorages = [];
+    let filteredColors = [];
+    let filteredConditions = [];
+
+    let showDeleteFilter = false;
+    let resetFilters = true;
+
+    let min;
+    let max;
 
     $: {
         postsSearched = data.postsSearched;
         similarPosts = obtenerElementosAleatorios(data.similarPosts, 15);
         productSearched = data.product;
+
+        allStorages = data.allStorages;
+        allColors = data.allColors;
+        allConditions = data.allConditions;
+
+        if (filteredStorages.length > 0) {
+            postsSearched = postsSearched.filter(post => filteredStorages.includes(post.product.storage));
+        }
+
+        if (filteredColors.length > 0) {
+            postsSearched = postsSearched.filter(post => filteredColors.map(color => color.toLowerCase()).includes(post.product.color));
+        }
+
+        if (filteredConditions.length > 0) {
+            postsSearched = postsSearched.filter(post => filteredConditions.includes(post.condition));
+        }
+
+        if (max !== undefined && min !== undefined) {
+            postsSearched = postsSearched.filter(post => parseFloat(post.price) <= max && parseFloat(post.price) >= min);
+        }
+
+        if (filteredStorages.length > 0 || filteredColors.length > 0 || filteredConditions.length > 0 || max !== undefined || min !== undefined) {
+            showDeleteFilter = true;
+        } else {
+            showDeleteFilter = false;
+        }
+        
         numberResults = postsSearched.length;
     }
-    let postsSearched = data.postsSearched;
-    let similarPosts = obtenerElementosAleatorios(data.similarPosts, 15);
-    let productSearched = data.product;
-    let numberResults = postsSearched.length;
+
 
     function obtenerElementosAleatorios(array, cantidad) {
         // Si el array es más largo que la cantidad deseada, recórtalo
@@ -26,40 +71,100 @@
         }
         return array; // Devuelve el array con elementos aleatorios
     }
+
+    function deleteFilters() {
+        filteredStorages = [];
+        filteredColors = [];
+        filteredConditions = [];
+        max = undefined;
+        min = undefined;
+        resetFilters = !resetFilters;
+    }
+
+    function priceFilter(e) {
+        max = e.detail.maxFilter;
+        min = e.detail.minFilter;
+    }
+
 </script>
 
-{#key postsSearched}
+
 <div class="container">
     <h2>Tú busqueda: {productSearched}</h2>
-    {#if numberResults > 0}
+    <div class="subtitle">
         <h3 class="results">{numberResults} {numberResults > 1 ? 'productos' : 'producto'}</h3>
-        <div class="posts">
-            {#each postsSearched as post}
-                <Preview {post} />
-            {/each}
-        </div>
-    {:else}
-        <div class="no-found">
-            <div class="no-found-content">
-                <div class="error-title">
-                    <h3>Oops!...</h3>
-                    <i class="fa-solid fa-face-sad-tear"></i>
-                </div>
-                <span>Parece que no hemos encontrado ningún producto que coincida con su búsqueda</span>
-                <a href="/">Seguir explorando</a>
+        {#if showDeleteFilter}
+            <button on:click={deleteFilters} class="delete">Borrar todos los filtros</button>
+        {/if}
+    </div>
+    <div class="content" class:no-results={!data.postsSearched.length > 0}>
+        {#if data.postsSearched.length > 0}
+            <div class="filters">
+                {#key productSearched}
+                    {#key resetFilters}
+                        <PriceRange
+                        label='Precio'
+                        posts={data.postsSearched}
+                        on:change={priceFilter}
+                        on:mount={() => {
+                            max = undefined;
+                            min = undefined;
+                        }}
+                        />
+                    {/key}
+
+                    <Filter
+                    bind:resetFilters bind:checkedValues={filteredStorages} title={'Almacenamiento (GB)'} params={allStorages} extraTxt={' GB'}
+                    />
+
+                    <Filter
+                    bind:resetFilters bind:checkedValues={filteredColors} title={'Color'} params={allColors}
+                    />
+
+                    <Filter
+                    bind:resetFilters bind:checkedValues={filteredConditions} title={'Condición'} params={allConditions}
+                    />
+                {/key}
             </div>
+        {/if}
+        <div class="rigth-content">
+            {#if numberResults > 0}
+            <div class="posts">
+                {#key productSearched}
+                    {#each postsSearched as post}
+                        <Preview {post} />
+                    {/each}
+                {/key}
+            </div>
+            {:else}
+            <div class="no-found">
+                <div class="no-found-content">
+                    <div class="error-title">
+                        <h3>Oops!...</h3>
+                        <i class="fa-solid fa-face-sad-tear"></i>
+                    </div>
+                    <span>Parece que no hemos encontrado ningún producto que coincida con su búsqueda</span>
+                    <a href="/">Seguir explorando</a>
+                </div>
+            </div>
+            {/if}
         </div>
-    {/if}
+        
+    </div>
+
+
     <div class="similar-container">
         <h2>Productos similares</h2>
         <div class="similar-content">
-            {#each similarPosts as post}
-                <Preview {post} />
-            {/each}
+            {#key productSearched}
+                {#each similarPosts as post}
+                    <Preview {post} />
+                {/each}
+            {/key}
         </div>
     </div>
 </div>
-{/key}
+
 
 <style>
     .container {
@@ -71,6 +176,24 @@
         font-size: 2.2rem;
     }
 
+    .subtitle {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .subtitle button {
+        border: none;
+        height: max-content;
+        margin: 0;
+        border: 0;
+        background: none;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
     .results {
         width: max-content;
         font-size: 1.2rem;
@@ -80,12 +203,29 @@
         border-radius: 2rem;
     }
 
-    .posts {
+    .content {
         margin-top: 3rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+    }
+
+    .no-results {
+        grid-template-columns: 1fr;
+    }
+
+    .posts {
+        /* background-color: aquamarine; */
         display: grid;
         grid-template-columns: repeat(auto-fill, 17rem);
         justify-content: space-between;
         row-gap: 2rem;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .similar-container {
